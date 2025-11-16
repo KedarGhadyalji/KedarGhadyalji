@@ -13,7 +13,10 @@ I'm currently leveling up my knowledge in:<br><br>- **Machine Learning**<br>- **
 - Or even… the art of brewing the perfect cup of **coffee** ☕  <br>  (Also open to debates about pineapple on pizza 🍍)
 ## 🌌 Outside of Coding
 If you're not into code, no problem — I love chatting about:
-- Sci-fi  <br>- Sports  <br>- Controversial pizza toppings 🍕  <br>- Anything tech, space, or futuristic
+- Sci-fi  
+- Sports  
+- Controversial pizza toppings 🍕  
+- Anything tech, cars, or futuristic
 ## 📫 Let’s Connect!
 Feel free to reach out or explore my work — I’d love to collaborate, learn, and grow together!
 
