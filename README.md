@@ -16,7 +16,8 @@ If you're not into code, no problem — I love chatting about:
 - Sci-fi  
 - Sports  
 - Controversial pizza toppings 🍕  
-- Anything tech, cars, or futuristic
+- Anything tech
+- Sports Cars
 ## 📫 Let’s Connect!
 Feel free to reach out or explore my work — I’d love to collaborate, learn, and grow together!
 
