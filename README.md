@@ -31,17 +31,17 @@ Feel free to reach out or explore my work — I’d love to collaborate, learn, 
 
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=KedarGhadyalji&theme=radical&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=KedarGhadyalji&theme=radical&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=KedarGhadyalji&theme=radical&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+![](https://github-readme-stats.vercel.app/api?username=KedarGhadyalji&theme=radical&hide_border=false&include_all_commits=false&count_private=false&cache_seconds=1800)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=KedarGhadyalji&theme=radical&hide_border=false&cache_seconds=1800)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=KedarGhadyalji&theme=radical&hide_border=false&include_all_commits=false&count_private=false&layout=compact&cache_seconds=1800)
 
 
 ### ✍️ Daily Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&cache_seconds=1800)
 
 
 ### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=KedarGhadyalji&limit=5&theme=radical&combine_all_yearly_contributions=true)
+![](https://github-contributor-stats.vercel.app/api?username=KedarGhadyalji&limit=5&theme=radical&combine_all_yearly_contributions=true&cache_seconds=1800)
 
 <!--
 **KedarGhadyalji/KedarGhadyalji** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
