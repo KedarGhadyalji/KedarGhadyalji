@@ -40,13 +40,14 @@ Feel free to reach out or explore my work — I’d love to collaborate, learn, 
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&cache_seconds=1800)
 
 
-### 🔝 Top Contributed Repo
-![](https://github-contributor-stats.vercel.app/api?username=KedarGhadyalji&limit=5&theme=radical&combine_all_yearly_contributions=true&cache_seconds=1800)
 
 <!--
 **KedarGhadyalji/KedarGhadyalji** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
+
+### 🔝 Top Contributed Repo
+![](https://github-contributor-stats.vercel.app/api?username=KedarGhadyalji&limit=5&theme=radical&combine_all_yearly_contributions=true&cache_seconds=1800)
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
