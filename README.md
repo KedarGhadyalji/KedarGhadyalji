@@ -3,11 +3,11 @@ I'm a **full-stack developer**, **tech enthusiast**, and an **aspiring AI creato
 ## 🚀 Currently Building
 ### CraftedCV and AnalyzedCV
 *CraftedCV* is a powerful full-stack web application designed to help users build the perfect resume. *AnalyzedCV* complements it by offering a trusted ATS checker, ensuring your resume is fully optimized for applicant tracking systems.  <br>Built with **React**, fueled by passion, curiosity, and (naturally) **lots of coffee** ☕✨.
-## 🚀 Currently Working
-### Cyber Secured India Intern
-*CSI* is a cyber security company at which I am working as a software developer intern in full-stack web application *LMS*. <br>Built with **React and TypeScript**, fueled by passion, curiosity, and (naturally) **lots of coffee** ☕✨.
 ## 🧠 Learning & Growing
 I'm currently leveling up my knowledge in:<br><br>- **Machine Learning**<br>- **Deep Learning**<br><br>Through curated courses, with the goal of transforming data into meaningful insights — and eventually creating something groundbreaking in **AI** 🤖💡.
+## 🛠️ Currently Working
+### Cyber Secured India Intern
+*CSI* is a cybersecurity-focused company where I’m working as a **Software Developer Intern**, contributing to a full-stack **Learning Management System**. Built with **React** and **TypeScript**, focused on clean architecture, smooth user experiences, and secure-by-design development 🔐✨
 ## 💬 Ask Me About
 - Best practices in **Java**
 - **Data Structures & Algorithms**
