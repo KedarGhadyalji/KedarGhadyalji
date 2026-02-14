@@ -6,7 +6,7 @@ I'm a **full-stack developer**, **tech enthusiast**, and an **aspiring AI engine
 ## 🧠 Learning & Growing
 I'm currently leveling up my knowledge in: **Data Science & Machine Learning** through curated courses, with the goal of transforming data into meaningful insights — and eventually creating something groundbreaking in **AI** 🤖💡.
 ## 🛠️ Currently Working
-### Cyber Secured India Intern
+### Cyber Secured India - Software Developer Intern
 *CSI* is a cybersecurity-focused company where I’m working as a **Software Developer Intern**, contributing to a full-stack **Learning Management System**. Built with **React** and **TypeScript**, focused on clean architecture, smooth user experiences, and secure-by-design development 🔐✨
 ## 💬 Ask Me About
 - Best practices in **Java**
