@@ -18,8 +18,8 @@ I'm currently leveling up my knowledge in: **Data Science & Machine Learning** t
 If you're not into code, no problem — I love chatting about:
 - Sci-fi  
 - Sports  
-- Controversial pizza toppings 🍕  
 - Sports Cars
+- Controversial pizza toppings 🍕  
 ## 📫 Let’s Connect!
 Feel free to reach out or explore my work — I’d love to collaborate, learn, and grow together!
 
