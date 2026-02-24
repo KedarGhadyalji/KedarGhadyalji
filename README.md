@@ -16,8 +16,8 @@ I'm currently leveling up my knowledge in: **Data Science & Machine Learning** t
 - Or even… the art of brewing the perfect cup of **coffee** ☕  <br>  (Also open to debates about pineapple on pizza 🍍)
 ## 🌌 Outside of Coding
 If you're not into code, no problem — I love chatting about:
-- Sci-fi  
 - Sports  
+- Sci-fi  
 - Sports Cars
 - Controversial pizza toppings 🍕  
 ## 📫 Let’s Connect!
