@@ -33,13 +33,13 @@ Feel free to reach out or explore my work — I’d love to collaborate, learn, 
 
 
 # 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=KedarGhadyalji&theme=gruvbox&hide_border=false&include_all_commits=false&count_private=false&cache_seconds=1800)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=KedarGhadyalji&theme=gruvbox&hide_border=false&cache_seconds=1800)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=KedarGhadyalji&theme=gruvbox&hide_border=false&include_all_commits=false&count_private=false&layout=compact&cache_seconds=1800)
+![](https://github-readme-stats.vercel.app/api?username=KedarGhadyalji&theme=gruvbox&hide_border=false&include_all_commits=false&count_private=false&cache_seconds=180)<br/>
+![](https://nirzak-streak-stats.vercel.app/?user=KedarGhadyalji&theme=gruvbox&hide_border=false&cache_seconds=180)<br/>
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=KedarGhadyalji&theme=gruvbox&hide_border=false&include_all_commits=false&count_private=false&layout=compact&cache_seconds=180)
 
 
 ### ✍️ Daily Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=gruvbox&cache_seconds=1800)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=gruvbox&cache_seconds=180)
 
 
 <!--
