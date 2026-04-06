@@ -39,7 +39,7 @@ Feel free to reach out or explore my work — I’d love to collaborate, learn, 
 
 
 ### ✍️ Daily Dev Quote
-![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=gruvbox&cache_seconds=180)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=gruvbox&cache_seconds=1800)
 
 
 <!--
