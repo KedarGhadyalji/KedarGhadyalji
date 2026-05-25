@@ -1,8 +1,11 @@
 # 💫 About Me: <br><br> 👋 Hi, I'm Kedar Ghadyalji!
 I'm a **full-stack developer**, **tech enthusiast**, and an **aspiring AI and Data Science Engineer** passionate about building user-centric applications and exploring intelligent systems.
+<!--
 ## 🚀 Currently Building
 ### CraftedCV and AnalyzedCV
 *CraftedCV* is a powerful full-stack web application designed to help users build the perfect resume. *AnalyzedCV* complements it by offering a trusted ATS checker, ensuring your resume is fully optimized for applicant tracking systems.  <br>Built with **React**, fueled by passion, curiosity, and (naturally) **lots of coffee** ☕✨.
+-->
+
 ## 🧠 Learning & Growing
 I'm currently leveling up my knowledge in: **Data Science & Machine Learning** through curated courses, with the goal of transforming data into meaningful insights and eventually creating something groundbreaking in **AI** 🤖💡.
 ## 💬 Ask Me About
