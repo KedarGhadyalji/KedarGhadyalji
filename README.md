@@ -9,7 +9,7 @@ I'm a **full-stack developer**, **tech enthusiast**, and an **aspiring AI and Da
 ## 🧠 Learning & Growing
 I'm currently leveling up my knowledge in: **Data Science & Machine Learning** through curated courses, with the goal of transforming data into meaningful insights and eventually creating something groundbreaking in **AI** 🤖💡.
 ## 💬 Ask Me About
-- Best practices in **Java**
+- Best practices in **Programming Languages**
 - **Data Structures & Algorithms**
 - Building efficient DS-based solutions
 - My journey through the **open-source world*
