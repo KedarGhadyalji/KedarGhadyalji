@@ -18,7 +18,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
-          options: "username=KedarGhadyalji&show_icons=true&theme=tokyonight"
+          options: "username=KedarGhadyalji&show_icons=true&theme=gruvbox"
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -26,7 +26,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: top-langs
-          options: "username=KedarGhadyalji&theme=tokyonight"
+          options: "username=KedarGhadyalji&theme=gruvbox"
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -35,6 +35,7 @@ jobs:
         with:
           username: KedarGhadyalji
           file: profile/trophy.svg
+          theme: gruvbox
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push
