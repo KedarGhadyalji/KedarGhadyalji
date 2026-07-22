@@ -13,7 +13,7 @@
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif;
-            fill: #70a5fd;
+            fill: #fabd2f;
             animation: fadeInAnimation 0.8s ease-in-out forwards;
           }
           @supports(-moz-appearance: auto) {
@@ -22,7 +22,7 @@
           }
           
     .stat {
-      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #38bdae;
+      font: 600 14px 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif; fill: #8ec07c;
     }
     @supports(-moz-appearance: auto) {
       /* Selector detects Firefox */
@@ -33,7 +33,7 @@
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae;
+      font: 800 24px 'Segoe UI', Ubuntu, Sans-Serif; fill: #8ec07c;
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     .rank-percentile-header {
@@ -46,18 +46,18 @@
     .not_bold { font-weight: 400 }
     .bold { font-weight: 700 }
     .icon {
-      fill: #bf91f3;
+      fill: #fe8019;
       display: block;
     }
 
     .rank-circle-rim {
-      stroke: #70a5fd;
+      stroke: #fabd2f;
       fill: none;
       stroke-width: 6;
       opacity: 0.2;
     }
     .rank-circle {
-      stroke: #70a5fd;
+      stroke: #fabd2f;
       stroke-dasharray: 250;
       fill: none;
       stroke-width: 6;
@@ -77,7 +77,7 @@
         stroke-dashoffset: 251.33;
       }
       to {
-        stroke-dashoffset: 229.87;
+        stroke-dashoffset: 229.81;
       }
     }
   
@@ -141,7 +141,7 @@
           height="99%"
           stroke="#e4e2e2"
           width="466"
-          fill="#1a1b27"
+          fill="#282828"
           stroke-opacity="1.0"
         />
 
@@ -207,7 +207,7 @@
         x="219.01"
         y="12.5"
         data-testid="commits"
-      >249</text>
+      >250</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
