@@ -35,7 +35,7 @@ jobs:
         with:
           username: KedarGhadyalji
           file: profile/trophy.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.TROPHY_TOKEN }}
 
       - name: Commit and push
         run: |
