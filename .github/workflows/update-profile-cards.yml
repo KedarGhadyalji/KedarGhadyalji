@@ -35,7 +35,6 @@ jobs:
         with:
           username: KedarGhadyalji
           file: profile/trophy.svg
-          theme: gruvbox
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit and push
