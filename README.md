@@ -172,7 +172,7 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/main/profile/top-langs.svg" width="49%"/>
+<!-- <img src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/main/profile/top-langs.svg" width="49%"/> -->
 
 </div>
 
