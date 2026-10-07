@@ -22,7 +22,7 @@ I'm a Software Engineer focused on building high-performance systems where archi
 
 From modeling well-structured database objects and managing REST API paths to setting up dynamic frontend states, I enjoy shipping complete web platforms that are reliable and easy to use — backed by production-ready components, robust data workflows, and stable application pathways.
 
-- 🧠 **AI/ML Expertise** — integrating Generative AI (Gemini API) into resume-parsing pipelines, evaluation engines, and context-aware tools
+- 🧠 **AI/ML Expertise** — integrating LLM APIs into resume-analysis pipelines and chatbots, and building ML models such as an XGBoost stress predictor with SHAP explanations
 - 🏗️ **Full-Stack Development** — MongoDB, Express, React, Node.js applications with optimized schemas and state-driven UI
 - ⚙️ **Product Engineering Mindset** — practical evaluation tools, structured data mapping, and reliable API-driven architecture
 
@@ -41,16 +41,6 @@ From modeling well-structured database objects and managing REST API paths to se
 ## 🚀 Featured Projects
 
 <!--PROJECTS:START-->
-<div align="center">
-
-<a href="https://github.com/KedarGhadyalji/tailwind-warning-auto-fix"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-1-dark.svg"/><img src="profile/project-1-light.svg" width="49%" alt="Tailwind Warning Auto-Fix project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/Spawn_Git_Clone"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-2-dark.svg"/><img src="profile/project-2-light.svg" width="49%" alt="Spawn project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/PixelJar"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-3-dark.svg"/><img src="profile/project-3-light.svg" width="49%" alt="PixelJar project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/CraftedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-4-dark.svg"/><img src="profile/project-4-light.svg" width="49%" alt="CraftedCV project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/AnalyzedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-5-dark.svg"/><img src="profile/project-5-light.svg" width="49%" alt="AnalyzedCV project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/genie-ai-pocket-agent"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-6-dark.svg"/><img src="profile/project-6-light.svg" width="49%" alt="Genie project card"/></picture></a>
-
-</div>
 <!--PROJECTS:END-->
 
 <sub>Click a card to open the repository. Cards update from `data/projects.json`.</sub>
