@@ -15,6 +15,7 @@
   .mid{font:700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#EBBCBA}
   .sub{font:400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#908CAA}
   .ax{font:400 11px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#908CAA}
+  .pt{font:600 10px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#E0DEF4}
   .in{animation:fade .8s ease both}
   @keyframes fade{from{opacity:0}}
 </style>
