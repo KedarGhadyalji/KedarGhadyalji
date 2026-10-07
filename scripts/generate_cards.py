@@ -154,6 +154,7 @@ def card(w, h, inner, label):
   .mid{{font:700 14px {FONT};fill:{ACCENT}}}
   .sub{{font:400 12px {FONT};fill:{MUTED}}}
   .ax{{font:400 11px {FONT};fill:{MUTED}}}
+  .pt{{font:600 10px {FONT};fill:{TEXT}}}
   .in{{animation:fade .8s ease both}}
   @keyframes fade{{from{{opacity:0}}}}
 </style>
@@ -291,7 +292,9 @@ def activity_card(d, span=60):
     ys = [B - (B - T) * v / ymax for v in vals]
 
     out = f'<text x="28" y="36" class="title">Contribution Activity</text>'
-    out += f'<text x="{W - 28}" y="36" class="sub" text-anchor="end">last {span} days · {sum(vals)} contributions</text>'
+    best_i = max(range(span), key=lambda i: (vals[i], i))  # latest day wins ties
+    best_txt = f" · best day {fmt_d(pts[best_i])} ({vals[best_i]})" if vals[best_i] else ""
+    out += f'<text x="{W - 28}" y="36" class="sub" text-anchor="end">last {span} days · {sum(vals)} contributions{best_txt}</text>'
     for t in range(0, ymax + 1, step):
         y = B - (B - T) * t / ymax
         out += (f'<line x1="{L}" y1="{y:.1f}" x2="{R}" y2="{y:.1f}" stroke="{GRID}" stroke-width="1"/>'
@@ -303,9 +306,16 @@ def activity_card(d, span=60):
     line = " ".join(f"{x:.1f},{y:.1f}" for x, y in zip(xs, ys))
     out += (f'<polygon points="{L},{B} {line} {R},{B}" fill="url(#fill)"/>'
             f'<polyline points="{line}" fill="none" stroke="{ACCENT}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>')
-    for x, y, v in zip(xs, ys, vals):
+    colw = (R - L) / (span - 1)
+    for i, (x, y, v) in enumerate(zip(xs, ys, vals)):
         if v:
-            out += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="{BG}" stroke="{ACCENT}" stroke-width="2"/>'
+            r, fill = (5, ACCENT) if i == best_i else (3.2, BG)
+            out += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{fill}" stroke="{ACCENT}" stroke-width="2"/>'
+            out += f'<text x="{x:.1f}" y="{y - 10:.1f}" class="pt" text-anchor="middle">{v}</text>'
+    # Native tooltips: only shown when the SVG is opened on its own (GitHub shows README images as plain <img>).
+    for i, (x, v) in enumerate(zip(xs, vals)):
+        tip = f"{pts[i]:%a}, {fmt_d(pts[i])}: {v} contribution{'s' if v != 1 else ''}"
+        out += f'<rect x="{x - colw / 2:.1f}" y="{T}" width="{colw:.1f}" height="{B - T}" fill="transparent"><title>{tip}</title></rect>'
     write("activity.svg", card(W, H, out, "Contribution activity graph"))
 
 
