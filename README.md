@@ -56,8 +56,6 @@ From modeling well-structured database objects and managing REST API paths to se
 </div>
 <!--PROJECTS:END-->
 
-<sub>Click a card to open the repository. Cards update from `data/projects.json`.</sub>
-
 <br/>
 
 ## 💼 Experience
