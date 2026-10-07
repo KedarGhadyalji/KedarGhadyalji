@@ -32,7 +32,7 @@ USER = os.environ.get("GH_USER", "KedarGhadyalji")
 TOKEN = os.environ.get("GH_TOKEN", "")
 MOCK = "--mock" in sys.argv
 README_PATH = os.environ.get("README_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "README.md"))
-MAX_PINS = 6
+PROJECTS_PATH = os.environ.get("PROJECTS_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "projects.json"))
 
 
 # ---- Data -------------------------------------------------------------------
@@ -69,15 +69,6 @@ query($login:String!){
   }
 }"""
 
-PIN_FIELDS = """
-  name description url stargazerCount forkCount
-  primaryLanguage{name}
-  repositoryTopics(first:3){nodes{topic{name}}}
-"""
-PINS_Q = "query($login:String!){user(login:$login){pinnedItems(first:6,types:REPOSITORY){nodes{... on Repository{" + PIN_FIELDS + "}}}}}"
-RECENT_Q = ("query($login:String!){user(login:$login){repositories(first:6,ownerAffiliations:OWNER,isFork:false,privacy:PUBLIC,"
-            "orderBy:{field:PUSHED_AT,direction:DESC}){nodes{" + PIN_FIELDS + "}}}}")
-
 CAL_Q = """
 query($login:String!,$from:DateTime!,$to:DateTime!){
   user(login:$login){
@@ -107,13 +98,8 @@ def fetch_real():
             for d in w["contributionDays"]:
                 days[d["date"]] = d["contributionCount"]
 
-    pins = [n for n in gql(PINS_Q, {"login": USER})["user"]["pinnedItems"]["nodes"] if n]
-    if not pins:  # nothing pinned on GitHub: fall back to the most recently pushed repos
-        pins = gql(RECENT_Q, {"login": USER})["user"]["repositories"]["nodes"]
-
     cc = u["contributionsCollection"]
     return {
-        "pins": [norm_pin(n) for n in pins[:MAX_PINS]],
         "name": u["name"] or USER,
         "stars": sum(r["stargazerCount"] for r in repos),
         "commits": cc["totalCommitContributions"] + cc["restrictedContributionsCount"],
@@ -137,14 +123,6 @@ def fetch_mock():
     for i in range(0, 12):  # a recent streak
         days[(today - timedelta(days=i)).isoformat()] = random.randint(1, 6)
     return {
-        "pins": [
-            {"name": "tailwind-warning-auto-fix", "desc": "VS Code extension that resolves TailwindCSS warnings and class conflicts in one click.", "url": "https://github.com/KedarGhadyalji/tailwind-warning-auto-fix", "stars": 5, "forks": 1, "lang": "TypeScript", "topics": ["vscode", "tailwindcss", "extension"]},
-            {"name": "Spawn_Git_Clone", "desc": "A Git clone built from scratch in Python: object storage, branching and commit history.", "url": "https://github.com/KedarGhadyalji/Spawn_Git_Clone", "stars": 3, "forks": 0, "lang": "Python", "topics": ["git", "cli"]},
-            {"name": "PixelJar", "desc": "Multi-language code playground with sandboxed execution and a physics-based sticker login.", "url": "https://github.com/KedarGhadyalji/PixelJar", "stars": 4, "forks": 2, "lang": "JavaScript", "topics": ["nextjs", "convex", "monaco"]},
-            {"name": "craftedcv", "desc": "AI-powered resume builder with real-time Gemini suggestions, ATS templates and PDF export.", "url": "https://github.com/KedarGhadyalji/craftedcv", "stars": 2, "forks": 0, "lang": "JavaScript", "topics": ["react", "gemini"]},
-            {"name": "AnalyzedCV", "desc": "", "url": "https://github.com/KedarGhadyalji/AnalyzedCV", "stars": 1, "forks": 0, "lang": "", "topics": []},
-            {"name": "genie-ai-pocket-agent", "desc": "Cross-platform mobile app for creating and managing small AI agents in real time with a very long description that should be truncated nicely.", "url": "https://github.com/KedarGhadyalji/genie-ai-pocket-agent", "stars": 0, "forks": 0, "lang": "TypeScript", "topics": ["react-native", "expo", "ai"]},
-        ],
         "name": "Kedar Ghadyalji", "stars": 14, "commits": 612, "prs": 23, "issues": 6,
         "contributed_to": 9, "repos": 27, "followers": 31,
         "langs": {"JavaScript": 52000, "TypeScript": 31000, "Python": 24000, "CSS": 12000,
@@ -331,15 +309,6 @@ def activity_card(d, span=60):
     write("activity.svg", card(W, H, out, "Contribution activity graph"))
 
 
-def norm_pin(n):
-    return {
-        "name": n["name"], "desc": n.get("description") or "", "url": n["url"],
-        "stars": n["stargazerCount"], "forks": n["forkCount"],
-        "lang": (n.get("primaryLanguage") or {}).get("name", ""),
-        "topics": [t["topic"]["name"] for t in n["repositoryTopics"]["nodes"]],
-    }
-
-
 def ellipsize(text, n):
     return text if len(text) <= n else text[: n - 1].rstrip() + "\u2026"
 
@@ -354,68 +323,93 @@ def star_pts(cx, cy, r):
     return " ".join(pts)
 
 
-def pin_card(pin, idx, lang_rank):
-    W, H = 495, 150
+REPO_Q = "query($o:String!,$n:String!){repository(owner:$o,name:$n){stargazerCount forkCount}}"
+
+
+def repo_stats(repo):
+    if MOCK:
+        return random.randint(0, 9), random.randint(0, 3)
+    try:
+        r = gql(REPO_Q, {"o": repo.split("/")[0], "n": repo.split("/")[1]})["repository"]
+        return r["stargazerCount"], r["forkCount"]
+    except Exception as e:  # missing or private repo: show the card without stats
+        print(f"  note: no stats for {repo} ({str(e)[:60]})")
+        return None, None
+
+
+def project_card(p, idx, stars, forks):
+    W, H = 495, 256
     out = (f'<rect x="24" y="19" width="12" height="15" rx="2.5" fill="none" stroke="{ACCENT}" stroke-width="1.6"/>'
            f'<rect x="27" y="23" width="6" height="1.6" rx=".8" fill="{ACCENT}"/>'
-           f'<text x="46" y="32" class="title" style="font-size:16px">{escape(ellipsize(pin["name"], 34))}</text>')
+           f'<text x="46" y="32" class="title" style="font-size:16px">{escape(ellipsize(p["title"], 26))}</text>')
 
-    desc = pin["desc"].strip() or "No description yet."
-    lines = textwrap.wrap(desc, 58)
-    if len(lines) > 2:
-        lines = [lines[0], ellipsize(" ".join(lines[1:]), 58)]
+    kind = ellipsize(p.get("kind", ""), 22)
+    if kind:
+        kw = int(len(kind) * 6.4 + 20)
+        out += (f'<rect x="{W - 24 - kw}" y="17" width="{kw}" height="22" rx="11" fill="none" stroke="{ACCENT2}" stroke-width="1"/>'
+                f'<text x="{W - 24 - kw / 2:.0f}" y="32" class="sub" text-anchor="middle" style="fill:{ACCENT2}">{escape(kind)}</text>')
+
+    lines = textwrap.wrap(p["description"].strip(), 58)
+    if len(lines) > 3:
+        lines = lines[:2] + [ellipsize(" ".join(lines[2:]), 58)]
     for i, ln in enumerate(lines):
-        out += f'<text x="24" y="{58 + i * 18}" class="lbl" style="fill:{TEXT};font-weight:400">{escape(ln)}</text>'
+        out += f'<text x="24" y="{66 + i * 18}" class="lbl" style="fill:{TEXT};font-weight:400">{escape(ln)}</text>'
 
-    x = 24
-    for t in pin["topics"][:3]:
-        w = int(len(t) * 6.6 + 18)
+    if p.get("highlight"):
+        out += (f'<polygon points="30,129 35,134 30,139 25,134" fill="{ACCENT}"/>'
+                f'<text x="44" y="138" class="lbl" style="fill:{ACCENT};font-weight:600">{escape(ellipsize(p["highlight"], 52))}</text>')
+
+    x, y = 24, 156
+    for t in p["stack"]:
+        w = int(len(t) * 6.6 + 20)
         if x + w > W - 24:
+            x, y = 24, y + 30
+        if y > 186:
             break
-        out += (f'<rect x="{x}" y="92" width="{w}" height="22" rx="11" fill="#26233A" stroke="#524F67"/>'
-                f'<text x="{x + w / 2:.0f}" y="107" class="sub" text-anchor="middle" style="fill:{TEXT}">{escape(t)}</text>')
+        out += (f'<rect x="{x}" y="{y}" width="{w}" height="23" rx="11.5" fill="#26233A" stroke="#524F67"/>'
+                f'<text x="{x + w / 2:.0f}" y="{y + 16}" class="sub" text-anchor="middle" style="fill:{TEXT}">{escape(t)}</text>')
         x += w + 8
 
-    fx = 24
-    if pin["lang"]:
-        col = LANG_COLORS[lang_rank.get(pin["lang"], len(lang_rank) + idx) % len(LANG_COLORS)]
-        out += (f'<circle cx="{fx + 5}" cy="132" r="5" fill="{col}"/>'
-                f'<text x="{fx + 16}" y="136" class="lbl">{escape(pin["lang"])}</text>')
-        fx += 16 + int(len(pin["lang"]) * 7.2) + 18
-    out += (f'<polygon points="{star_pts(fx + 7, 131, 7)}" fill="none" stroke="{MUTED}" stroke-width="1.4" stroke-linejoin="round"/>'
-            f'<text x="{fx + 20}" y="136" class="lbl">{pin["stars"]:,}</text>')
-    fx += 20 + int(len(str(pin["stars"])) * 7.5) + 18
-    fx_y = 123
-    out += (f'<g fill="none" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round">'
-            f'<circle cx="{fx + 3}" cy="{fx_y + 3}" r="2.2"/><circle cx="{fx + 11}" cy="{fx_y + 3}" r="2.2"/>'
-            f'<circle cx="{fx + 7}" cy="{fx_y + 13}" r="2.2"/>'
-            f'<path d="M{fx + 3} {fx_y + 5.2}v2q0 2 2 2h4q2 0 2-2v-2M{fx + 7} {fx_y + 9}v1.8"/></g>'
-            f'<text x="{fx + 20}" y="136" class="lbl">{pin["forks"]:,}</text>')
-    write(f"pin-{idx + 1}.svg", card(W, H, f'<g class="in" style="animation-delay:{idx * 0.08:.2f}s">{out}</g>', f'Repository {pin["name"]}'))
+    if stars is not None:
+        fx, fy = 24, 239
+        out += (f'<polygon points="{star_pts(fx + 7, fy - 5, 7)}" fill="none" stroke="{MUTED}" stroke-width="1.4" stroke-linejoin="round"/>'
+                f'<text x="{fx + 20}" y="{fy}" class="lbl">{stars:,}</text>')
+        fx += 20 + int(len(str(stars)) * 7.5) + 18
+        out += (f'<g fill="none" stroke="{MUTED}" stroke-width="1.4" stroke-linecap="round">'
+                f'<circle cx="{fx + 3}" cy="{fy - 10}" r="2.2"/><circle cx="{fx + 11}" cy="{fy - 10}" r="2.2"/>'
+                f'<circle cx="{fx + 7}" cy="{fy}" r="2.2"/>'
+                f'<path d="M{fx + 3} {fy - 7.8}v2q0 2 2 2h4q2 0 2-2v-2M{fx + 7} {fy - 4}v1.8"/></g>'
+                f'<text x="{fx + 20}" y="{fy}" class="lbl">{forks:,}</text>')
+    out += (f'<text x="{W - 24}" y="239" class="sub" text-anchor="end" style="fill:{MUTED}">View repository \u2192</text>')
+    write(f"project-{idx + 1}.svg", card(W, H, f'<g class="in" style="animation-delay:{idx * 0.08:.2f}s">{out}</g>', f'Project {p["title"]}'))
 
 
-def pins_cards(d):
-    for old in glob.glob(os.path.join(OUT_DIR, "pin-*.svg")):  # drop cards for repos that are no longer pinned
-        os.remove(old)
-    ranked = [n for n, _ in sorted(d["langs"].items(), key=lambda kv: kv[1], reverse=True)]
-    lang_rank = {n: i for i, n in enumerate(ranked)}
-    for i, pin in enumerate(d["pins"]):
-        pin_card(pin, i, lang_rank)
+def project_cards():
+    try:
+        projects = json.load(open(PROJECTS_PATH, encoding="utf-8"))
+    except FileNotFoundError:
+        print("no data/projects.json, skipping project cards")
+        return
+    for old in glob.glob(os.path.join(OUT_DIR, "pin-*.svg")) + glob.glob(os.path.join(OUT_DIR, "project-*.svg")):
+        os.remove(old)  # clear cards for removed projects (and the retired pinned cards)
+    for i, p in enumerate(projects):
+        stars, forks = repo_stats(p["repo"])
+        project_card(p, i, stars, forks)
 
     cells = "\n".join(
-        f'<a href="{escape(p["url"])}"><img src="profile/pin-{i + 1}.svg" width="49%" alt="{escape(p["name"])} repository card"/></a>'
-        for i, p in enumerate(d["pins"]))
-    block = f'<!--PINNED:START-->\n<div align="center">\n\n{cells}\n\n</div>\n<!--PINNED:END-->'
+        f'<a href="https://github.com/{escape(p["repo"])}"><img src="profile/project-{i + 1}.svg" width="49%" alt="{escape(p["title"])} project card"/></a>'
+        for i, p in enumerate(projects))
+    block = f'<!--PROJECTS:START-->\n<div align="center">\n\n{cells}\n\n</div>\n<!--PROJECTS:END-->'
     try:
         text = open(README_PATH, encoding="utf-8").read()
     except FileNotFoundError:
         return
-    new, n = re.subn(r"<!--PINNED:START-->.*?<!--PINNED:END-->", lambda _: block, text, flags=re.S)
+    new, n = re.subn(r"<!--PROJECTS:START-->.*?<!--PROJECTS:END-->", lambda _: block, text, flags=re.S)
     if n:
         open(README_PATH, "w", encoding="utf-8").write(new)
-        print("updated pinned section in README")
+        print("updated projects section in README")
     else:
-        print("README has no PINNED markers; cards written but README not changed")
+        print("README has no PROJECTS markers; cards written but README not changed")
 
 
 def main():
@@ -426,7 +420,7 @@ def main():
     langs_card(data)
     streak_card(data)
     activity_card(data)
-    pins_cards(data)
+    project_cards()
 
 
 if __name__ == "__main__":
