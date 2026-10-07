@@ -16,10 +16,10 @@ try { legacy = require("simple-icons-legacy"); } catch { legacy = modern; }
 
 const find = (lib, slug) => Object.values(lib).find((i) => i && i.slug === slug);
 
-// ---- Theme: Midnight Violet -------------------------------------------------
+// ---- Theme: Rose Dusk -------------------------------------------------
 const T = {
-  bg: "#0D1117", border: "#2A2350", chip: "#1A1533", chipBorder: "#4C3F8F",
-  accent: "#A78BFA", accent2: "#8B5CF6", text: "#EDE9FE", muted: "#8E88B8",
+  bg: "#191724", border: "#403D52", chip: "#26233A", chipBorder: "#524F67",
+  accent: "#EBBCBA", accent2: "#C4A7E7", text: "#E0DEF4", muted: "#908CAA",
 };
 const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif";
 
