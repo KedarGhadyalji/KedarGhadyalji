@@ -319,15 +319,31 @@ def activity_card(d, span=60):
         out += f'<text x="{xs[i]:.1f}" y="{H - 18}" class="ax" text-anchor="middle">{fmt_d(pts[i])}</text>'
     out += f'<text x="{xs[-1]:.1f}" y="{H - 18}" class="ax" text-anchor="end">{fmt_d(pts[-1])}</text>'
 
-    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in zip(xs, ys))
-    out += (f'<polygon points="{L},{B} {line} {R},{B}" fill="url(#fill)"/>'
-            f'<polyline points="{line}" fill="none" stroke="{ACCENT}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>')
+    # one bar per day; only the best day, today and a few of the tallest days get a number
     colw = (R - L) / (span - 1)
+    bw = colw * 0.64
+    labelled = {best_i}
+    if vals[-1]:
+        labelled.add(span - 1)
+    for v, i in sorted(((v, i) for i, v in enumerate(vals) if v), key=lambda t: (-t[0], -t[1])):
+        if len(labelled) >= 6:
+            break
+        if all(abs(i - j) >= 3 for j in labelled):  # keep numbers from crowding each other
+            labelled.add(i)
+
     for i, (x, y, v) in enumerate(zip(xs, ys, vals)):
-        if v:
-            r, fill = (5, ACCENT) if i == best_i else (3.2, BG)
-            out += f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" fill="{fill}" stroke="{ACCENT}" stroke-width="2"/>'
-            out += f'<text x="{x:.1f}" y="{y - 10:.1f}" class="pt" text-anchor="middle">{v}</text>'
+        if not v:
+            continue
+        if i == best_i:
+            fill, op = ACCENT, 1
+        elif i in labelled:
+            fill, op = ACCENT2, 0.9
+        else:
+            fill, op = ACCENT, 0.45
+        out += (f'<rect x="{x - bw / 2:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{B - y:.1f}" rx="2" '
+                f'fill="{fill}" fill-opacity="{op}"/>')
+        if i in labelled:
+            out += f'<text x="{x:.1f}" y="{y - 6:.1f}" class="pt" text-anchor="middle">{v}</text>'
     # Native tooltips: only shown when the SVG is opened on its own (GitHub shows README images as plain <img>).
     for i, (x, v) in enumerate(zip(xs, vals)):
         tip = f"{pts[i]:%a}, {fmt_d(pts[i])}: {v} contribution{'s' if v != 1 else ''}"
