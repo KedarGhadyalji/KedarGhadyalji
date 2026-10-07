@@ -3,48 +3,133 @@
     "title": "Tailwind Warning Auto-Fix",
     "kind": "VS Code extension",
     "repo": "KedarGhadyalji/tailwind-warning-auto-fix",
-    "description": "Resolves TailwindCSS optimization warnings and class conflicts in one click, with precise, instantly undoable edits.",
+    "description": "Fixes every Tailwind CSS IntelliSense warning in the file with one command, and one undo reverts the whole batch.",
     "highlight": "Published on the VS Code Marketplace",
-    "stack": ["TypeScript", "VS Code API", "TailwindCSS"]
+    "stack": [
+      "TypeScript",
+      "VS Code API",
+      "Tailwind CSS",
+      "GitHub Actions"
+    ]
   },
   {
-    "title": "Spawn",
-    "kind": "Git clone in Python",
-    "repo": "KedarGhadyalji/Spawn_Git_Clone",
-    "description": "A Git clone built from scratch with object storage, branching, a staging area and commit history through a clean CLI.",
-    "highlight": "SHA-1 hashing and zlib compression, like real Git",
-    "stack": ["Python", "SHA-1", "zlib", "CLI"]
+    "title": "ZeroBucket",
+    "kind": "Python and npm library",
+    "repo": "KedarGhadyalji/ZeroBucket",
+    "description": "Database-native image storage: keep images in the Postgres, SQLite or MySQL you already run instead of adding a bucket.",
+    "highlight": "Published on PyPI and npm, with a Django adapter",
+    "stack": [
+      "Python",
+      "TypeScript",
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "Django"
+    ]
   },
   {
     "title": "PixelJar",
     "kind": "Multi-language IDE",
     "repo": "KedarGhadyalji/PixelJar",
-    "description": "A code playground with a cloud execution engine, a customizable Monaco workspace and a physics-based sticker login.",
-    "highlight": "10+ sandboxed runtimes with low-latency execution",
-    "stack": ["Next.js", "Clerk", "Convex", "Framer Motion", "Tailwind CSS"]
+    "description": "A code playground that runs 10 languages in the cloud, with a Monaco editor workspace and a physics-based sticker login.",
+    "highlight": "Run code in 10 languages from the browser",
+    "stack": [
+      "Next.js",
+      "Clerk",
+      "Convex",
+      "Monaco Editor",
+      "Framer Motion",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "title": "Spawn",
+    "kind": "Git clone in Python",
+    "repo": "KedarGhadyalji/Spawn_Git_Clone",
+    "description": "A Git clone built from scratch with SHA-1 object storage, commits, branches and a staging area, in pure standard-library Python.",
+    "highlight": "Zero dependencies: Python standard library only",
+    "stack": [
+      "Python",
+      "SHA-1",
+      "zlib",
+      "argparse"
+    ]
+  },
+  {
+    "title": "MindCare AI",
+    "kind": "AI wellness platform",
+    "repo": "KedarGhadyalji/MindCare-AI",
+    "private": true,
+    "description": "Predicts student stress with an XGBoost model and SHAP explanations, plus Dr. Eva, a crisis-aware wellness chatbot.",
+    "highlight": "400+ tests, admin panel and crisis alert workflow",
+    "stack": [
+      "FastAPI",
+      "React",
+      "TypeScript",
+      "XGBoost",
+      "SQLite",
+      "Gemini API"
+    ]
   },
   {
     "title": "CraftedCV",
     "kind": "AI resume builder",
     "repo": "KedarGhadyalji/CraftedCV",
-    "description": "Real-time, context-aware Gemini suggestions for summaries and bullets, ATS-optimized templates and instant PDF export.",
-    "highlight": "Live preview with ATS-friendly layouts",
-    "stack": ["React", "Tailwind CSS", "Gemini API", "MongoDB"]
+    "description": "A full-stack MERN resume builder with AI-written summaries and bullet points, live preview, ATS-friendly layouts and PDF export.",
+    "highlight": "Live preview with ATS-ready layouts",
+    "stack": [
+      "React",
+      "Redux Toolkit",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "OpenAI API"
+    ]
   },
   {
     "title": "AnalyzedCV",
     "kind": "Resume diagnostic tool",
     "repo": "KedarGhadyalji/AnalyzedCV",
-    "description": "Scores how well a profile matches a job description with semantic analysis that goes beyond keyword matching.",
-    "highlight": "Keyword-gap breakdown with optimization tips",
-    "stack": ["React", "Tailwind CSS", "Gemini API", "Puter.js"]
+    "description": "Scores how well your resume matches a job description, with ATS tips, keyword gaps and AI feedback on uploaded PDFs.",
+    "highlight": "Instant match score with keyword-gap tips",
+    "stack": [
+      "React Router",
+      "TypeScript",
+      "Zustand",
+      "Tailwind CSS",
+      "Puter.js",
+      "pdf.js"
+    ]
   },
   {
     "title": "Genie",
     "kind": "AI pocket agent app",
-    "repo": "KedarGhadyalji/genie-ai-pocket-agent",
-    "description": "A cross-platform mobile app for creating and managing small AI agents in real time with the Kravix API.",
-    "highlight": "Brings lightweight AI agents to your phone",
-    "stack": ["React Native", "TypeScript", "Expo", "Kravix API", "Tailwind CSS"]
+    "repo": "KedarGhadyalji/Genie-AI-Pocket-Agent",
+    "description": "A mobile chat app with 12 preset AI agents and custom agents you create, with image attachments and saved chat history.",
+    "highlight": "Google sign-in with chat history saved per user",
+    "stack": [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Firebase",
+      "Clerk",
+      "Kravix Studio"
+    ]
+  },
+  {
+    "title": "SSMS",
+    "kind": "Inventory portal",
+    "repo": "KedarGhadyalji/SSMS-Project",
+    "private": true,
+    "description": "Somaiya Stationery Management System: faculty raise requests and admins fulfil them from tracked stock, with audit logs and PDF reports.",
+    "highlight": "Built with a team of 4 for the AI-DS department",
+    "stack": [
+      "React",
+      "Tailwind CSS",
+      "Django",
+      "Django REST",
+      "PostgreSQL",
+      "ReportLab"
+    ]
   }
 ]
