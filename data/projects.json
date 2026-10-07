@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Tailwind Warning Auto-Fix",
+    "kind": "VS Code extension",
+    "repo": "KedarGhadyalji/tailwind-warning-auto-fix",
+    "description": "Resolves TailwindCSS optimization warnings and class conflicts in one click, with precise, instantly undoable edits.",
+    "highlight": "Published on the VS Code Marketplace",
+    "stack": ["TypeScript", "VS Code API", "TailwindCSS"]
+  },
+  {
+    "title": "Spawn",
+    "kind": "Git clone in Python",
+    "repo": "KedarGhadyalji/Spawn_Git_Clone",
+    "description": "A Git clone built from scratch with object storage, branching, a staging area and commit history through a clean CLI.",
+    "highlight": "SHA-1 hashing and zlib compression, like real Git",
+    "stack": ["Python", "SHA-1", "zlib", "CLI"]
+  },
+  {
+    "title": "PixelJar",
+    "kind": "Multi-language IDE",
+    "repo": "KedarGhadyalji/PixelJar",
+    "description": "A code playground with a cloud execution engine, a customizable Monaco workspace and a physics-based sticker login.",
+    "highlight": "10+ sandboxed runtimes with low-latency execution",
+    "stack": ["Next.js", "Clerk", "Convex", "Framer Motion", "Tailwind CSS"]
+  },
+  {
+    "title": "CraftedCV",
+    "kind": "AI resume builder",
+    "repo": "KedarGhadyalji/CraftedCV",
+    "description": "Real-time, context-aware Gemini suggestions for summaries and bullets, ATS-optimized templates and instant PDF export.",
+    "highlight": "Live preview with ATS-friendly layouts",
+    "stack": ["React", "Tailwind CSS", "Gemini API", "MongoDB"]
+  },
+  {
+    "title": "AnalyzedCV",
+    "kind": "Resume diagnostic tool",
+    "repo": "KedarGhadyalji/AnalyzedCV",
+    "description": "Scores how well a profile matches a job description with semantic analysis that goes beyond keyword matching.",
+    "highlight": "Keyword-gap breakdown with optimization tips",
+    "stack": ["React", "Tailwind CSS", "Gemini API", "Puter.js"]
+  },
+  {
+    "title": "Genie",
+    "kind": "AI pocket agent app",
+    "repo": "KedarGhadyalji/genie-ai-pocket-agent",
+    "description": "A cross-platform mobile app for creating and managing small AI agents in real time with the Kravix API.",
+    "highlight": "Brings lightweight AI agents to your phone",
+    "stack": ["React Native", "TypeScript", "Expo", "Kravix API", "Tailwind CSS"]
+  }
+]
