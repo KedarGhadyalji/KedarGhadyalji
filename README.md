@@ -41,6 +41,16 @@ From modeling well-structured database objects and managing REST API paths to se
 ## 🚀 Featured Projects
 
 <!--PROJECTS:START-->
+<div align="center">
+
+<a href="https://github.com/KedarGhadyalji/tailwind-warning-auto-fix"><img src="profile/project-1.svg" width="49%" alt="Tailwind Warning Auto-Fix project card"/></a>
+<a href="https://github.com/KedarGhadyalji/Spawn_Git_Clone"><img src="profile/project-2.svg" width="49%" alt="Spawn project card"/></a>
+<a href="https://github.com/KedarGhadyalji/PixelJar"><img src="profile/project-3.svg" width="49%" alt="PixelJar project card"/></a>
+<a href="https://github.com/KedarGhadyalji/CraftedCV"><img src="profile/project-4.svg" width="49%" alt="CraftedCV project card"/></a>
+<a href="https://github.com/KedarGhadyalji/AnalyzedCV"><img src="profile/project-5.svg" width="49%" alt="AnalyzedCV project card"/></a>
+<a href="https://github.com/KedarGhadyalji/genie-ai-pocket-agent"><img src="profile/project-6.svg" width="49%" alt="Genie project card"/></a>
+
+</div>
 <!--PROJECTS:END-->
 
 <sub>Click a card to open the repository. Cards update from `data/projects.json`.</sub>
