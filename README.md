@@ -8,11 +8,6 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Location-Mumbai%2C%20India-26233A?style=flat-square&labelColor=907AA9&color=26233A" alt="Location: Mumbai, India"/>
-<img src="https://img.shields.io/badge/Open%20To-Opportunities-26233A?style=flat-square&labelColor=907AA9&color=26233A" alt="Open to opportunities"/>
-
-<br/><br/>
-
 <a href="https://kedar-ghadyalji-portfolio.vercel.app/" target="_blank"><img src="profile/btn-portfolio.svg" height="40" alt="Portfolio"/></a>
 <a href="https://www.linkedin.com/in/kedar-ghadyalji-98b7a6341" target="_blank"><img src="profile/btn-linkedin.svg" height="40" alt="LinkedIn"/></a>
 <a href="mailto:kedarghadyalji@gmail.com"><img src="profile/btn-email.svg" height="40" alt="Email"/></a>
