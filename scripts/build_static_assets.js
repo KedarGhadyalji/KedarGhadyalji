@@ -45,16 +45,16 @@ const GROUPS = [
     ["HTML5", "html5"], ["CSS3", "css3", "l"],
   ]],
   ["Frontend & Mobile", [
-    ["React", "react"], ["React Native", "react"], ["Next.js", "nextdotjs"], ["Tailwind CSS", "tailwindcss"],
+    ["React", "react"], ["React Native", "react"], ["Redux", "redux"], ["React Router", "reactrouter"], ["Next.js", "nextdotjs"], ["Tailwind CSS", "tailwindcss"],
     ["Vite", "vite"], ["EJS", "ejs"], ["Flutter", "flutter"], ["Expo", "expo"],
   ]],
   ["Backend & Databases", [
-    ["Node.js", "nodedotjs"], ["Express.js", "express"], ["Django", "django"],
+    ["Node.js", "nodedotjs"], ["FastAPI", "fastapi"], ["Express.js", "express"], ["Django", "django"],
     ["Flask", "flask"], ["MongoDB", "mongodb"], ["MySQL", "mysql"], ["PostgreSQL", "postgresql"],
     ["SQLite", "sqlite"], ["Firebase", "firebase"], ["Convex", "convex"],
   ]],
   ["AI & Data Science", [
-    ["Gemini API", "googlegemini"], ["NumPy", "numpy"], ["Pandas", "pandas"], ["scikit-learn", "scikitlearn"],
+    ["OpenAI API", "openai", "l"], ["Gemini API", "googlegemini"], ["NumPy", "numpy"], ["Pandas", "pandas"], ["scikit-learn", "scikitlearn"],
     ["Matplotlib", null, "raw", "MPL"], ["Anaconda", "anaconda"],
   ]],
   ["Tools & Design", [
