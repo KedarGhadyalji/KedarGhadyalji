@@ -43,6 +43,16 @@ From modeling well-structured database objects and managing REST API paths to se
 ### 📌 Pinned on GitHub
 
 <!--PINNED:START-->
+<div align="center">
+
+<a href="https://github.com/KedarGhadyalji/KedarGhadyalji"><img src="profile/pin-1.svg" width="49%" alt="KedarGhadyalji repository card"/></a>
+<a href="https://github.com/KedarGhadyalji/ZeroBucket"><img src="profile/pin-2.svg" width="49%" alt="ZeroBucket repository card"/></a>
+<a href="https://github.com/KedarGhadyalji/Kedar-Ghadyalji-Portfolio"><img src="profile/pin-3.svg" width="49%" alt="Kedar-Ghadyalji-Portfolio repository card"/></a>
+<a href="https://github.com/KedarGhadyalji/tailwind-warning-auto-fix"><img src="profile/pin-4.svg" width="49%" alt="tailwind-warning-auto-fix repository card"/></a>
+<a href="https://github.com/KedarGhadyalji/AnalyzedCV"><img src="profile/pin-5.svg" width="49%" alt="AnalyzedCV repository card"/></a>
+<a href="https://github.com/KedarGhadyalji/CraftedCV"><img src="profile/pin-6.svg" width="49%" alt="CraftedCV repository card"/></a>
+
+</div>
 <!--PINNED:END-->
 
 ### 🔎 Project details
