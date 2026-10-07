@@ -16,13 +16,13 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate snake (Emerald Night palette)
+      - name: Generate snake (Midnight Violet palette)
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-contribution-grid-snake-dark.svg?color_snake=A7F3D0&color_dots=161B22,064E3B,047857,10B981,34D399
-            dist/github-contribution-grid-snake.svg?color_snake=064E3B&color_dots=EBEDF0,A7F3D0,6EE7B7,34D399,059669
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#F0ABFC&color_dots=#161B22,#2E1065,#5B21B6,#8B5CF6,#C4B5FD
+            dist/github-contribution-grid-snake.svg?color_snake=#4C1D95&color_dots=#EBEDF0,#DDD6FE,#C4B5FD,#8B5CF6,#6D28D9
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
