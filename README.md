@@ -1,15 +1,15 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,50:6D28D9,100:A78BFA&height=220&section=header&text=Kedar%20Ghadyalji&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%7C%20Full-Stack%20Developer&descAlignY=55&descSize=18" width="100%" alt="Kedar Ghadyalji header"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:26233A,50:907AA9,100:EBBCBA&height=220&section=header&text=Kedar%20Ghadyalji&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%7C%20Full-Stack%20Developer&descAlignY=55&descSize=18" width="100%" alt="Kedar Ghadyalji header"/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=A78BFA&center=true&vCenter=true&width=750&lines=Full-Stack+Developer+%7C+AI%2FML+Enthusiast;Building+clean%2C+scalable+web+applications;Exploring+GenAI+%26+Agentic+Systems" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=EBBCBA&center=true&vCenter=true&width=750&lines=Full-Stack+Developer+%7C+AI%2FML+Enthusiast;Building+clean%2C+scalable+web+applications;Exploring+GenAI+%26+Agentic+Systems" alt="Typing SVG" />
 </a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Location-Mumbai%2C%20India-1A1533?style=flat-square&labelColor=5B21B6&color=1A1533" alt="Location: Mumbai, India"/>
-<img src="https://img.shields.io/badge/Open%20To-Opportunities-1A1533?style=flat-square&labelColor=5B21B6&color=1A1533" alt="Open to opportunities"/>
+<img src="https://img.shields.io/badge/Location-Mumbai%2C%20India-26233A?style=flat-square&labelColor=907AA9&color=26233A" alt="Location: Mumbai, India"/>
+<img src="https://img.shields.io/badge/Open%20To-Opportunities-26233A?style=flat-square&labelColor=907AA9&color=26233A" alt="Open to opportunities"/>
 
 <br/><br/>
 
@@ -159,7 +159,7 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 - Implemented secure dual-mode authentication, dynamic evaluation tools, discussion forums, and automated certificate generation
 - Optimized front-facing delivery channels, improving mobile responsiveness, layout performance, and UI stability
 
-![React](https://img.shields.io/badge/React-1A1533?style=flat-square&logo=react&logoColor=A78BFA) ![TypeScript](https://img.shields.io/badge/TypeScript-1A1533?style=flat-square&logo=typescript&logoColor=A78BFA) ![MongoDB](https://img.shields.io/badge/MongoDB-1A1533?style=flat-square&logo=mongodb&logoColor=A78BFA) ![UI/UX](https://img.shields.io/badge/UI%2FUX-1A1533?style=flat-square&labelColor=1A1533&color=1A1533)
+![React](https://img.shields.io/badge/React-26233A?style=flat-square&logo=react&logoColor=EBBCBA) ![TypeScript](https://img.shields.io/badge/TypeScript-26233A?style=flat-square&logo=typescript&logoColor=EBBCBA) ![MongoDB](https://img.shields.io/badge/MongoDB-26233A?style=flat-square&logo=mongodb&logoColor=EBBCBA) ![UI/UX](https://img.shields.io/badge/UI%2FUX-26233A?style=flat-square&labelColor=26233A&color=26233A)
 
 <br/>
 
@@ -220,7 +220,7 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 *"Turning complex problems into elegant, functional reality."*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1E1B4B,50:6D28D9,100:A78BFA&height=120&section=footer" width="100%" alt="footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:26233A,50:907AA9,100:EBBCBA&height=120&section=footer" width="100%" alt="footer"/>
 
 </div>
 
