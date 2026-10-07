@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="256" viewBox="0 0 495 256" role="img" aria-label="Project AnalyzedCV">
+<defs>
+  <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#B4637A" stop-opacity=".45"/><stop offset="1" stop-color="#B4637A" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#907AA9"/><stop offset="1" stop-color="#B4637A"/>
+  </linearGradient>
+</defs>
+<style>
+  .title{font:700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#B4637A}
+  .lbl{font:500 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#797593}
+  .val{font:700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#575279}
+  .big{font:800 32px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#575279}
+  .mid{font:700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#B4637A}
+  .sub{font:400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#797593}
+  .ax{font:400 11px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#797593}
+  .pt{font:600 10px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#575279}
+  .in{animation:fade .8s ease both}
+  @keyframes fade{from{opacity:0}}
+</style>
+<rect x=".5" y=".5" width="494" height="255" rx="12" fill="#FFFAF3" stroke="#E4D8CE"/>
+<g class="in" style="animation-delay:0.32s"><rect x="24" y="19" width="12" height="15" rx="2.5" fill="none" stroke="#B4637A" stroke-width="1.6"/><rect x="27" y="23" width="6" height="1.6" rx=".8" fill="#B4637A"/><text x="46" y="32" class="title" style="font-size:16px">AnalyzedCV</text><rect x="311" y="17" width="160" height="22" rx="11" fill="none" stroke="#907AA9" stroke-width="1"/><text x="391" y="32" class="sub" text-anchor="middle" style="fill:#907AA9">Resume diagnostic tool</text><text x="24" y="66" class="lbl" style="fill:#575279;font-weight:400">Scores how well a profile matches a job description with</text><text x="24" y="84" class="lbl" style="fill:#575279;font-weight:400">semantic analysis that goes beyond keyword matching.</text><polygon points="30,129 35,134 30,139 25,134" fill="#B4637A"/><text x="44" y="138" class="lbl" style="fill:#B4637A;font-weight:600">Keyword-gap breakdown with optimization tips</text><rect x="24" y="156" width="53" height="23" rx="11.5" fill="#F2E9E1" stroke="#D9CBBF"/><text x="50" y="172" class="sub" text-anchor="middle" style="fill:#575279">React</text><rect x="85" y="156" width="99" height="23" rx="11.5" fill="#F2E9E1" stroke="#D9CBBF"/><text x="134" y="172" class="sub" text-anchor="middle" style="fill:#575279">Tailwind CSS</text><rect x="192" y="156" width="86" height="23" rx="11.5" fill="#F2E9E1" stroke="#D9CBBF"/><text x="235" y="172" class="sub" text-anchor="middle" style="fill:#575279">Gemini API</text><rect x="286" y="156" width="72" height="23" rx="11.5" fill="#F2E9E1" stroke="#D9CBBF"/><text x="322" y="172" class="sub" text-anchor="middle" style="fill:#575279">Puter.js</text><polygon points="31.0,227.0 32.9,231.5 37.7,231.8 34.0,235.0 35.1,239.7 31.0,237.2 26.9,239.7 28.0,235.0 24.3,231.8 29.1,231.5" fill="none" stroke="#797593" stroke-width="1.4" stroke-linejoin="round"/><text x="44" y="239" class="lbl">0</text><g fill="none" stroke="#797593" stroke-width="1.4" stroke-linecap="round"><circle cx="72" cy="229" r="2.2"/><circle cx="80" cy="229" r="2.2"/><circle cx="76" cy="239" r="2.2"/><path d="M72 231.2v2q0 2 2 2h4q2 0 2-2v-2M76 235v1.8"/></g><text x="89" y="239" class="lbl">0</text><text x="471" y="239" class="sub" text-anchor="end" style="fill:#797593">View repository →</text></g>
+</svg>

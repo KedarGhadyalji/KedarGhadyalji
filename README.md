@@ -43,12 +43,12 @@ From modeling well-structured database objects and managing REST API paths to se
 <!--PROJECTS:START-->
 <div align="center">
 
-<a href="https://github.com/KedarGhadyalji/tailwind-warning-auto-fix"><img src="profile/project-1.svg" width="49%" alt="Tailwind Warning Auto-Fix project card"/></a>
-<a href="https://github.com/KedarGhadyalji/Spawn_Git_Clone"><img src="profile/project-2.svg" width="49%" alt="Spawn project card"/></a>
-<a href="https://github.com/KedarGhadyalji/PixelJar"><img src="profile/project-3.svg" width="49%" alt="PixelJar project card"/></a>
-<a href="https://github.com/KedarGhadyalji/CraftedCV"><img src="profile/project-4.svg" width="49%" alt="CraftedCV project card"/></a>
-<a href="https://github.com/KedarGhadyalji/AnalyzedCV"><img src="profile/project-5.svg" width="49%" alt="AnalyzedCV project card"/></a>
-<a href="https://github.com/KedarGhadyalji/genie-ai-pocket-agent"><img src="profile/project-6.svg" width="49%" alt="Genie project card"/></a>
+<a href="https://github.com/KedarGhadyalji/tailwind-warning-auto-fix"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-1-dark.svg"/><img src="profile/project-1-light.svg" width="49%" alt="Tailwind Warning Auto-Fix project card"/></picture></a>
+<a href="https://github.com/KedarGhadyalji/Spawn_Git_Clone"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-2-dark.svg"/><img src="profile/project-2-light.svg" width="49%" alt="Spawn project card"/></picture></a>
+<a href="https://github.com/KedarGhadyalji/PixelJar"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-3-dark.svg"/><img src="profile/project-3-light.svg" width="49%" alt="PixelJar project card"/></picture></a>
+<a href="https://github.com/KedarGhadyalji/CraftedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-4-dark.svg"/><img src="profile/project-4-light.svg" width="49%" alt="CraftedCV project card"/></picture></a>
+<a href="https://github.com/KedarGhadyalji/AnalyzedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-5-dark.svg"/><img src="profile/project-5-light.svg" width="49%" alt="AnalyzedCV project card"/></picture></a>
+<a href="https://github.com/KedarGhadyalji/genie-ai-pocket-agent"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-6-dark.svg"/><img src="profile/project-6-light.svg" width="49%" alt="Genie project card"/></picture></a>
 
 </div>
 <!--PROJECTS:END-->

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" role="img" aria-label="Most used languages">
+<defs>
+  <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#B4637A" stop-opacity=".45"/><stop offset="1" stop-color="#B4637A" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#907AA9"/><stop offset="1" stop-color="#B4637A"/>
+  </linearGradient>
+</defs>
+<style>
+  .title{font:700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#B4637A}
+  .lbl{font:500 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#797593}
+  .val{font:700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#575279}
+  .big{font:800 32px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#575279}
+  .mid{font:700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#B4637A}
+  .sub{font:400 12px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#797593}
+  .ax{font:400 11px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#797593}
+  .pt{font:600 10px 'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif;fill:#575279}
+  .in{animation:fade .8s ease both}
+  @keyframes fade{from{opacity:0}}
+</style>
+<rect x=".5" y=".5" width="494" height="194" rx="12" fill="#FFFAF3" stroke="#E4D8CE"/>
+<text x="25" y="35" class="title">Most Used Languages</text><clipPath id="r"><rect x="25" y="52" width="445" height="12" rx="6"/></clipPath><g clip-path="url(#r)"><rect x="25.00" y="52" width="237.78" height="12" fill="#B4637A"/><rect x="262.28" y="52" width="106.49" height="12" fill="#907AA9"/><rect x="368.27" y="52" width="91.32" height="12" fill="#56949F"/><rect x="459.09" y="52" width="7.39" height="12" fill="#EA9D34"/><rect x="465.98" y="52" width="3.71" height="12" fill="#D7827E"/><rect x="469.18" y="52" width="0.97" height="12" fill="#286983"/><rect x="469.65" y="52" width="0.75" height="12" fill="#575279"/><rect x="469.90" y="52" width="0.60" height="12" fill="#9893A5"/></g><g class="in" style="animation-delay:0.00s"><circle cx="30" cy="92" r="5" fill="#B4637A"/><text x="43" y="96" class="val" style="font-weight:600">JavaScript</text><text x="230" y="96" class="lbl" text-anchor="end">53.3%</text></g><g class="in" style="animation-delay:0.08s"><circle cx="30" cy="117" r="5" fill="#907AA9"/><text x="43" y="121" class="val" style="font-weight:600">Python</text><text x="230" y="121" class="lbl" text-anchor="end">23.8%</text></g><g class="in" style="animation-delay:0.16s"><circle cx="30" cy="142" r="5" fill="#56949F"/><text x="43" y="146" class="val" style="font-weight:600">TypeScript</text><text x="230" y="146" class="lbl" text-anchor="end">20.4%</text></g><g class="in" style="animation-delay:0.24s"><circle cx="30" cy="167" r="5" fill="#EA9D34"/><text x="43" y="171" class="val" style="font-weight:600">CSS</text><text x="230" y="171" class="lbl" text-anchor="end">1.5%</text></g><g class="in" style="animation-delay:0.32s"><circle cx="265" cy="92" r="5" fill="#D7827E"/><text x="278" y="96" class="val" style="font-weight:600">SCSS</text><text x="465" y="96" class="lbl" text-anchor="end">0.7%</text></g><g class="in" style="animation-delay:0.40s"><circle cx="265" cy="117" r="5" fill="#286983"/><text x="278" y="121" class="val" style="font-weight:600">HTML</text><text x="465" y="121" class="lbl" text-anchor="end">0.1%</text></g><g class="in" style="animation-delay:0.48s"><circle cx="265" cy="142" r="5" fill="#575279"/><text x="278" y="146" class="val" style="font-weight:600">Shell</text><text x="465" y="146" class="lbl" text-anchor="end">0.1%</text></g><g class="in" style="animation-delay:0.56s"><circle cx="265" cy="167" r="5" fill="#9893A5"/><text x="278" y="171" class="val" style="font-weight:600">Other</text><text x="465" y="171" class="lbl" text-anchor="end">0.0%</text></g>
+</svg>
