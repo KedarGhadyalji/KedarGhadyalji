@@ -47,11 +47,11 @@ From modeling well-structured database objects and managing REST API paths to se
 <a href="https://github.com/KedarGhadyalji/ZeroBucket"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-2-dark.svg"/><img src="profile/project-2-light.svg" width="49%" alt="ZeroBucket project card"/></picture></a>
 <a href="https://github.com/KedarGhadyalji/PixelJar"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-3-dark.svg"/><img src="profile/project-3-light.svg" width="49%" alt="PixelJar project card"/></picture></a>
 <a href="https://github.com/KedarGhadyalji/Spawn_Git_Clone"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-4-dark.svg"/><img src="profile/project-4-light.svg" width="49%" alt="Spawn project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/MindCare-AI"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-5-dark.svg"/><img src="profile/project-5-light.svg" width="49%" alt="MindCare AI project card"/></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-5-dark.svg"/><img src="profile/project-5-light.svg" width="49%" alt="MindCare AI project card"/></picture>
 <a href="https://github.com/KedarGhadyalji/CraftedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-6-dark.svg"/><img src="profile/project-6-light.svg" width="49%" alt="CraftedCV project card"/></picture></a>
 <a href="https://github.com/KedarGhadyalji/AnalyzedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-7-dark.svg"/><img src="profile/project-7-light.svg" width="49%" alt="AnalyzedCV project card"/></picture></a>
 <a href="https://github.com/KedarGhadyalji/Genie-AI-Pocket-Agent"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-8-dark.svg"/><img src="profile/project-8-light.svg" width="49%" alt="Genie project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/SSMS-Project"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-9-dark.svg"/><img src="profile/project-9-light.svg" width="49%" alt="SSMS project card"/></picture></a>
+<picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-9-dark.svg"/><img src="profile/project-9-light.svg" width="49%" alt="SSMS project card"/></picture>
 
 </div>
 <!--PROJECTS:END-->
