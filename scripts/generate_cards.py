@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generates the dynamic profile cards straight from the GitHub GraphQL API and
-writes them to /profile as plain SVG files (Emerald Night theme).
+writes them to /profile as plain SVG files (Midnight Violet theme).
 
 No third-party image hosts (vercel / heroku / demolab) are involved, so the
 cards can't "stop loading" because someone else's server is down or rate-limited.
@@ -17,11 +17,11 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from html import escape
 
-# ---- Theme: Emerald Night ---------------------------------------------------
-BG, BORDER = "#0D1117", "#1F3D33"
-ACCENT, ACCENT2 = "#34D399", "#10B981"
-TEXT, MUTED, GRID = "#D1FAE5", "#6B9E8A", "#16302A"
-LANG_COLORS = ["#34D399", "#047857", "#6EE7B7", "#059669", "#A7F3D0", "#10B981", "#2DD4BF", "#065F46"]
+# ---- Theme: Midnight Violet ---------------------------------------------------
+BG, BORDER = "#0D1117", "#2A2350"
+ACCENT, ACCENT2 = "#A78BFA", "#8B5CF6"
+TEXT, MUTED, GRID = "#EDE9FE", "#8E88B8", "#1E1A3D"
+LANG_COLORS = ["#A78BFA", "#5B21B6", "#C4B5FD", "#7C3AED", "#DDD6FE", "#8B5CF6", "#E879F9", "#4C1D95"]
 FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
 
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "profile")
