@@ -9,6 +9,7 @@ on:
     paths:
       - "scripts/**"
       - "README.md"
+      - "data/**"
       - ".github/workflows/update-profile-cards.yml"
 
 permissions:
