@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:022C22,50:059669,100:34D399&height=220&section=header&text=Kedar%20Ghadyalji&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%7C%20Full-Stack%20Developer&descAlignY=55&descSize=18" width="100%"/>
-
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:022C22,50:059669,100:34D399&height=220&section=header&text=Kedar%20Ghadyalji&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Engineer%20%7C%20Full-Stack%20Developer&descAlignY=55&descSize=18" width="100%" alt="Kedar Ghadyalji header"/>
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=34D399&center=true&vCenter=true&width=750&lines=Full-Stack+Developer+%7C+AI%2FML+Enthusiast;Building+clean%2C+scalable+web+applications;Exploring+GenAI+%26+Agentic+Systems" alt="Typing SVG" />
@@ -10,14 +8,14 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/📍%20Location-Mumbai%2C%20India-10B981?style=flat-square"/>
-<img src="https://img.shields.io/badge/🎯%20Open%20To-Opportunities-34D399?style=flat-square"/>
+<img src="https://img.shields.io/badge/Location-Mumbai%2C%20India-0F2A22?style=flat-square&labelColor=047857&color=0F2A22" alt="Location: Mumbai, India"/>
+<img src="https://img.shields.io/badge/Open%20To-Opportunities-0F2A22?style=flat-square&labelColor=047857&color=0F2A22" alt="Open to opportunities"/>
 
 <br/><br/>
 
-<a href="https://kedar-ghadyalji-portfolio.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/kedar-ghadyalji-98b7a6341" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="mailto:kedarghadyalji@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://kedar-ghadyalji-portfolio.vercel.app/" target="_blank"><img src="profile/btn-portfolio.svg" height="40" alt="Portfolio"/></a>
+<a href="https://www.linkedin.com/in/kedar-ghadyalji-98b7a6341" target="_blank"><img src="profile/btn-linkedin.svg" height="40" alt="LinkedIn"/></a>
+<a href="mailto:kedarghadyalji@gmail.com"><img src="profile/btn-email.svg" height="40" alt="Email"/></a>
 
 </div>
 
@@ -39,7 +37,9 @@ From modeling well-structured database objects and managing REST API paths to se
 
 ## 🛠️ Tech Stack
 
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white) ![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white) ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white) ![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white) ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white) ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white) ![EJS](https://img.shields.io/badge/ejs-%23B4CA65.svg?style=for-the-badge&logo=ejs&logoColor=black) ![Expo](https://img.shields.io/badge/expo-1C1E24?style=for-the-badge&logo=expo&logoColor=#D04A37) ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white) ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) ![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD) ![RayLib](https://img.shields.io/badge/RAYLIB-FFFFFF?style=for-the-badge&logo=raylib&logoColor=black) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white) ![Firebase](https://img.shields.io/badge/firebase-a08021?style=for-the-badge&logo=firebase&logoColor=ffcd34) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white) ![Aseprite](https://img.shields.io/badge/Aseprite-FFFFFF?style=for-the-badge&logo=Aseprite&logoColor=#7D929E) ![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white) ![Canva](https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white) ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) ![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+<div align="center">
+  <img src="profile/tech-stack.svg" width="100%" alt="Tech stack: languages, frontend, backend, AI and tools"/>
+</div>
 
 <br/>
 
@@ -159,7 +159,7 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 - Implemented secure dual-mode authentication, dynamic evaluation tools, discussion forums, and automated certificate generation
 - Optimized front-facing delivery channels, improving mobile responsiveness, layout performance, and UI stability
 
-![React](https://img.shields.io/badge/React-047857?style=flat-square&logo=react&logoColor=white) ![TypeScript](https://img.shields.io/badge/TypeScript-047857?style=flat-square&logo=typescript&logoColor=white) ![MongoDB](https://img.shields.io/badge/MongoDB-047857?style=flat-square&logo=mongodb&logoColor=white) ![UI/UX](https://img.shields.io/badge/UI%2FUX-047857?style=flat-square)
+![React](https://img.shields.io/badge/React-0F2A22?style=flat-square&logo=react&logoColor=34D399) ![TypeScript](https://img.shields.io/badge/TypeScript-0F2A22?style=flat-square&logo=typescript&logoColor=34D399) ![MongoDB](https://img.shields.io/badge/MongoDB-0F2A22?style=flat-square&logo=mongodb&logoColor=34D399) ![UI/UX](https://img.shields.io/badge/UI%2FUX-0F2A22?style=flat-square&labelColor=0F2A22&color=0F2A22)
 
 <br/>
 
@@ -167,22 +167,12 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/main/profile/stats.svg" width="49%"/>
-<img src="https://streak-stats.demolab.com?user=KedarGhadyalji&theme=gruvbox&hide_border=false" width="49%"/>
+<img src="profile/stats.svg" width="49%" alt="GitHub stats"/>
+<img src="profile/top-langs.svg" width="49%" alt="Most used languages"/>
 
-<br/>
+<br/><br/>
 
-<!-- <img src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/main/profile/top-langs.svg" width="49%"/> -->
-
-</div>
-
-<br/>
-
-## 🏅 GitHub Trophies
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/main/profile/trophy.svg"/>
+<img src="profile/streak.svg" width="98%" alt="Contribution streak"/>
 
 </div>
 
@@ -192,7 +182,7 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=KedarGhadyalji&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=34D399&line=10B981&point=C9D1D9"/>
+<img src="profile/activity.svg" width="98%" alt="Contribution activity graph"/>
 
 </div>
 
@@ -202,7 +192,11 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/output/github-contribution-grid-snake-dark.svg"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/output/github-contribution-grid-snake.svg" />
+  <img alt="Contribution snake" src="https://raw.githubusercontent.com/KedarGhadyalji/KedarGhadyalji/output/github-contribution-grid-snake-dark.svg" />
+</picture>
 
 </div>
 
@@ -212,10 +206,9 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 <div align="center">
 
-<a href="mailto:kedarghadyalji@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/kedar-ghadyalji-98b7a6341" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://kedar-ghadyalji-portfolio.vercel.app/" target="_blank"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white"/></a>
-<!-- <a href="https://github.com/KedarGhadyalji" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a> -->
+<a href="mailto:kedarghadyalji@gmail.com"><img src="profile/btn-email.svg" height="40" alt="Email"/></a>
+<a href="https://www.linkedin.com/in/kedar-ghadyalji-98b7a6341" target="_blank"><img src="profile/btn-linkedin.svg" height="40" alt="LinkedIn"/></a>
+<a href="https://kedar-ghadyalji-portfolio.vercel.app/" target="_blank"><img src="profile/btn-portfolio.svg" height="40" alt="Portfolio"/></a>
 
 </div>
 
@@ -227,7 +220,7 @@ Engineered core system mechanics, interactive modules, and progress-tracking lay
 
 *"Turning complex problems into elegant, functional reality."*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:022C22,50:059669,100:34D399&height=120&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:022C22,50:059669,100:34D399&height=120&section=footer" width="100%" alt="footer"/>
 
 </div>
 
