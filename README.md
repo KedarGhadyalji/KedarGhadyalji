@@ -40,6 +40,15 @@ From modeling well-structured database objects and managing REST API paths to se
 
 ## 🚀 Featured Projects
 
+### 📌 Pinned on GitHub
+
+<!--PINNED:START-->
+<!--PINNED:END-->
+
+### 🔎 Project details
+
+Expand a project for its stack, scale and impact.
+
 <details>
 <summary><b>🔧 Tailwind Warning Auto-Fix — VS Code Extension</b></summary>
 <br/>
