@@ -16,10 +16,10 @@ try { legacy = require("simple-icons-legacy"); } catch { legacy = modern; }
 
 const find = (lib, slug) => Object.values(lib).find((i) => i && i.slug === slug);
 
-// ---- Theme: Emerald Night -------------------------------------------------
+// ---- Theme: Midnight Violet -------------------------------------------------
 const T = {
-  bg: "#0D1117", border: "#1F3D33", chip: "#0F2A22", chipBorder: "#1F5F4A",
-  accent: "#34D399", accent2: "#10B981", text: "#D1FAE5", muted: "#6B9E8A",
+  bg: "#0D1117", border: "#2A2350", chip: "#1A1533", chipBorder: "#4C3F8F",
+  accent: "#A78BFA", accent2: "#8B5CF6", text: "#EDE9FE", muted: "#8E88B8",
 };
 const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif";
 
@@ -34,15 +34,15 @@ const MPL = `<g fill="none" stroke="${T.accent}" stroke-width="2" stroke-linecap
 const GROUPS = [
   ["Languages", [
     ["Python", "python"], ["Java", "openjdk"], ["C", "c"], ["C++", "cplusplus"], ["C#", "csharp", "l"],
-    ["JavaScript", "javascript"], ["TypeScript", "typescript"], ["Dart", "dart"], ["PHP", "php"],
+    ["JavaScript", "javascript"], ["TypeScript", "typescript"], ["Dart", "dart"],
     ["HTML5", "html5"], ["CSS3", "css3", "l"],
   ]],
   ["Frontend & Mobile", [
     ["React", "react"], ["React Native", "react"], ["Next.js", "nextdotjs"], ["Tailwind CSS", "tailwindcss"],
-    ["Vite", "vite"], ["jQuery", "jquery"], ["EJS", "ejs"], ["Flutter", "flutter"], ["Expo", "expo"],
+    ["Vite", "vite"], ["EJS", "ejs"], ["Flutter", "flutter"], ["Expo", "expo"],
   ]],
   ["Backend & Databases", [
-    ["Node.js", "nodedotjs"], ["Express.js", "express"], ["NestJS", "nestjs"], ["Django", "django"],
+    ["Node.js", "nodedotjs"], ["Express.js", "express"], ["Django", "django"],
     ["Flask", "flask"], ["MongoDB", "mongodb"], ["MySQL", "mysql"], ["PostgreSQL", "postgresql"],
     ["SQLite", "sqlite"], ["Firebase", "firebase"], ["Convex", "convex"],
   ]],
