@@ -20,11 +20,26 @@ import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from html import escape
 
-# ---- Theme: Rose Dusk ---------------------------------------------------
-BG, BORDER = "#191724", "#403D52"
-ACCENT, ACCENT2 = "#EBBCBA", "#C4A7E7"
-TEXT, MUTED, GRID = "#E0DEF4", "#908CAA", "#2A273F"
-LANG_COLORS = ["#EBBCBA", "#C4A7E7", "#9CCFD8", "#F6C177", "#EA9A97", "#31748F", "#E0DEF4", "#908CAA"]
+# ---- Themes: Rose Dusk (dark) + Rose Dawn (light) ---------------------------
+THEMES = {
+    "dark": dict(BG="#191724", BORDER="#403D52", ACCENT="#EBBCBA", ACCENT2="#C4A7E7", TEXT="#E0DEF4",
+                 MUTED="#908CAA", GRID="#2A273F", CHIP="#26233A", CHIPB="#524F67",
+                 LANG_COLORS=["#EBBCBA", "#C4A7E7", "#9CCFD8", "#F6C177", "#EA9A97", "#31748F", "#E0DEF4", "#908CAA"]),
+    "light": dict(BG="#FFFAF3", BORDER="#E4D8CE", ACCENT="#B4637A", ACCENT2="#907AA9", TEXT="#575279",
+                  MUTED="#797593", GRID="#EFE6DE", CHIP="#F2E9E1", CHIPB="#D9CBBF",
+                  LANG_COLORS=["#B4637A", "#907AA9", "#56949F", "#EA9D34", "#D7827E", "#286983", "#575279", "#9893A5"]),
+}
+MODE = "dark"
+
+
+def set_theme(mode):
+    """Swap the module-level colour constants so every card function renders in that theme."""
+    global MODE
+    MODE = mode
+    globals().update(THEMES[mode])
+
+
+set_theme("dark")
 FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
 
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "profile")
@@ -164,6 +179,7 @@ def card(w, h, inner, label):
 
 
 def write(name, svg):
+    name = name.replace(".svg", f"-{MODE}.svg")
     os.makedirs(OUT_DIR, exist_ok=True)
     with open(os.path.join(OUT_DIR, name), "w", encoding="utf-8") as f:
         f.write(svg)
@@ -376,7 +392,7 @@ def project_card(p, idx, stars, forks):
             x, y = 24, y + 30
         if y > 186:
             break
-        out += (f'<rect x="{x}" y="{y}" width="{w}" height="23" rx="11.5" fill="#26233A" stroke="#524F67"/>'
+        out += (f'<rect x="{x}" y="{y}" width="{w}" height="23" rx="11.5" fill="{CHIP}" stroke="{CHIPB}"/>'
                 f'<text x="{x + w / 2:.0f}" y="{y + 16}" class="sub" text-anchor="middle" style="fill:{TEXT}">{escape(t)}</text>')
         x += w + 8
 
@@ -394,20 +410,20 @@ def project_card(p, idx, stars, forks):
     write(f"project-{idx + 1}.svg", card(W, H, f'<g class="in" style="animation-delay:{idx * 0.08:.2f}s">{out}</g>', f'Project {p["title"]}'))
 
 
-def project_cards():
+def load_projects():
     try:
-        projects = json.load(open(PROJECTS_PATH, encoding="utf-8"))
+        return json.load(open(PROJECTS_PATH, encoding="utf-8"))
     except FileNotFoundError:
         print("no data/projects.json, skipping project cards")
-        return
-    for old in glob.glob(os.path.join(OUT_DIR, "pin-*.svg")) + glob.glob(os.path.join(OUT_DIR, "project-*.svg")):
-        os.remove(old)  # clear cards for removed projects (and the retired pinned cards)
-    for i, p in enumerate(projects):
-        stars, forks = repo_stats(p["repo"])
-        project_card(p, i, stars, forks)
+        return []
 
+
+def update_readme_projects(projects):
+    def pic(name, w, alt):
+        return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="profile/{name}-dark.svg"/>'
+                f'<img src="profile/{name}-light.svg" width="{w}" alt="{alt}"/></picture>')
     cells = "\n".join(
-        f'<a href="https://github.com/{escape(p["repo"])}"><img src="profile/project-{i + 1}.svg" width="49%" alt="{escape(p["title"])} project card"/></a>'
+        f'<a href="https://github.com/{escape(p["repo"])}">{pic(f"project-{i + 1}", "49%", escape(p["title"]) + " project card")}</a>'
         for i, p in enumerate(projects))
     block = f'<!--PROJECTS:START-->\n<div align="center">\n\n{cells}\n\n</div>\n<!--PROJECTS:END-->'
     try:
@@ -426,11 +442,24 @@ def main():
     if not MOCK and not TOKEN:
         sys.exit("GH_TOKEN is not set (use --mock for a local preview).")
     data = fetch_mock() if MOCK else fetch_real()
-    stats_card(data)
-    langs_card(data)
-    streak_card(data)
-    activity_card(data)
-    project_cards()
+    projects = load_projects()
+    stats = {p["repo"]: repo_stats(p["repo"]) for p in projects}  # fetched once, drawn in both themes
+
+    # clear cards from older layouts (unsuffixed files, retired pins, removed projects)
+    for pattern in ("pin-*.svg", "project-*.svg", "stats*.svg", "top-langs*.svg", "streak*.svg", "activity*.svg"):
+        for old in glob.glob(os.path.join(OUT_DIR, pattern)):
+            os.remove(old)
+
+    for mode in ("dark", "light"):
+        set_theme(mode)
+        stats_card(data)
+        langs_card(data)
+        streak_card(data)
+        activity_card(data)
+        for i, p in enumerate(projects):
+            project_card(p, i, *stats[p["repo"]])
+    if projects:
+        update_readme_projects(projects)
 
 
 if __name__ == "__main__":
