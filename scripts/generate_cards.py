@@ -422,7 +422,14 @@ def project_card(p, idx, stars, forks):
                 f'<circle cx="{fx + 7}" cy="{fy}" r="2.2"/>'
                 f'<path d="M{fx + 3} {fy - 7.8}v2q0 2 2 2h4q2 0 2-2v-2M{fx + 7} {fy - 4}v1.8"/></g>'
                 f'<text x="{fx + 20}" y="{fy}" class="lbl">{forks:,}</text>')
-    out += (f'<text x="{W - 24}" y="239" class="sub" text-anchor="end" style="fill:{MUTED}">View repository \u2192</text>')
+    if p.get("private"):  # private repo: no link, no stats; show a lock instead
+        label = "Private repository"
+        lx = W - 24 - int(len(label) * 6.3) - 20
+        out += (f'<rect x="{lx}" y="231" width="10" height="8" rx="2" fill="none" stroke="{MUTED}" stroke-width="1.4"/>'
+                f'<path d="M{lx + 2} 231v-2.5a3 3 0 0 1 6 0V231" fill="none" stroke="{MUTED}" stroke-width="1.4"/>'
+                f'<text x="{W - 24}" y="239" class="sub" text-anchor="end" style="fill:{MUTED}">{label}</text>')
+    else:
+        out += (f'<text x="{W - 24}" y="239" class="sub" text-anchor="end" style="fill:{MUTED}">View repository \u2192</text>')
     write(f"project-{idx + 1}.svg", card(W, H, f'<g class="in" style="animation-delay:{idx * 0.08:.2f}s">{out}</g>', f'Project {p["title"]}'))
 
 
@@ -439,7 +446,8 @@ def update_readme_projects(projects):
         return (f'<picture><source media="(prefers-color-scheme: dark)" srcset="profile/{name}-dark.svg"/>'
                 f'<img src="profile/{name}-light.svg" width="{w}" alt="{alt}"/></picture>')
     cells = "\n".join(
-        f'<a href="https://github.com/{escape(p["repo"])}">{pic(f"project-{i + 1}", "49%", escape(p["title"]) + " project card")}</a>'
+        (pic(f"project-{i + 1}", "49%", escape(p["title"]) + " project card") if p.get("private") else
+         f'<a href="https://github.com/{escape(p["repo"])}">{pic(f"project-{i + 1}", "49%", escape(p["title"]) + " project card")}</a>')
         for i, p in enumerate(projects))
     block = f'<!--PROJECTS:START-->\n<div align="center">\n\n{cells}\n\n</div>\n<!--PROJECTS:END-->'
     try:
@@ -459,7 +467,7 @@ def main():
         sys.exit("GH_TOKEN is not set (use --mock for a local preview).")
     data = fetch_mock() if MOCK else fetch_real()
     projects = load_projects()
-    stats = {p["repo"]: repo_stats(p["repo"]) for p in projects}  # fetched once, drawn in both themes
+    stats = {p["repo"]: ((None, None) if p.get("private") else repo_stats(p["repo"])) for p in projects}  # fetched once, drawn in both themes
 
     # clear cards from older layouts (unsuffixed files, retired pins, removed projects)
     for pattern in ("pin-*.svg", "project-*.svg", "stats*.svg", "top-langs*.svg", "streak*.svg", "activity*.svg"):
