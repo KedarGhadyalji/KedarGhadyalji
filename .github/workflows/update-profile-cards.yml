@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - "scripts/**"
+      - "README.md"
       - ".github/workflows/update-profile-cards.yml"
 
 permissions:
