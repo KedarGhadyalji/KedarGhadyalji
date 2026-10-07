@@ -17,10 +17,17 @@ try { legacy = require("simple-icons-legacy"); } catch { legacy = modern; }
 const find = (lib, slug) => Object.values(lib).find((i) => i && i.slug === slug);
 
 // ---- Theme: Rose Dusk -------------------------------------------------
-const T = {
-  bg: "#191724", border: "#403D52", chip: "#26233A", chipBorder: "#524F67",
-  accent: "#EBBCBA", accent2: "#C4A7E7", text: "#E0DEF4", muted: "#908CAA",
+const THEMES = {
+  dark: {
+    bg: "#191724", border: "#403D52", chip: "#26233A", chipBorder: "#524F67",
+    accent: "#EBBCBA", accent2: "#C4A7E7", text: "#E0DEF4", muted: "#908CAA",
+  },
+  light: {
+    bg: "#FFFAF3", border: "#E4D8CE", chip: "#F2E9E1", chipBorder: "#D9CBBF",
+    accent: "#B4637A", accent2: "#907AA9", text: "#575279", muted: "#797593",
+  },
 };
+let T = THEMES.dark; // swapped per theme in the build loop at the bottom
 const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif";
 
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -28,7 +35,7 @@ const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 const textWidth = (s, size = 13) =>
   [...s].reduce((w, c) => w + (/[A-Z0-9#+]/.test(c) ? 0.70 : /[ijlt.\-]/.test(c) ? 0.36 : 0.60) * size, 0);
 
-const MPL = `<g fill="none" stroke="${T.accent}" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/></g>`;
+const MPL = () => `<g fill="none" stroke="${T.accent}" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6.4 6.4"/></g>`;
 
 // [label, slug, source ("l" = legacy icon set, "raw" = custom svg), raw]
 const GROUPS = [
@@ -48,7 +55,7 @@ const GROUPS = [
   ]],
   ["AI & Data Science", [
     ["Gemini API", "googlegemini"], ["NumPy", "numpy"], ["Pandas", "pandas"], ["scikit-learn", "scikitlearn"],
-    ["Matplotlib", null, "raw", MPL], ["Anaconda", "anaconda"],
+    ["Matplotlib", null, "raw", "MPL"], ["Anaconda", "anaconda"],
   ]],
   ["Tools & Design", [
     ["Git", "git"], ["GitHub", "github"], ["VS Code", "visualstudiocode", "l"], ["Vercel", "vercel"],
@@ -60,7 +67,7 @@ const GROUPS = [
 function iconSvg(entry, x, y, size = 16, color = T.accent) {
   const [, slug, src, raw] = entry;
   const s = size / 24;
-  if (src === "raw") return `<g transform="translate(${x} ${y}) scale(${s})">${raw}</g>`;
+  if (src === "raw") return `<g transform="translate(${x} ${y}) scale(${s})">${MPL()}</g>`;
   const ic = find(src === "l" ? legacy : modern, slug) || find(modern, slug) || find(legacy, slug);
   if (!ic) throw new Error("Missing icon: " + slug);
   return `<path transform="translate(${x} ${y}) scale(${s})" fill="${color}" d="${ic.path}"/>`;
@@ -116,8 +123,14 @@ function button(label, slug, src) {
 
 const out = path.join(__dirname, "..", "profile");
 fs.mkdirSync(out, { recursive: true });
-fs.writeFileSync(path.join(out, "tech-stack.svg"), techStack());
-fs.writeFileSync(path.join(out, "btn-portfolio.svg"), button("Portfolio", "vercel"));
-fs.writeFileSync(path.join(out, "btn-linkedin.svg"), button("LinkedIn", "linkedin", "l"));
-fs.writeFileSync(path.join(out, "btn-email.svg"), button("Email", "gmail"));
-console.log("Built tech-stack.svg + buttons");
+for (const f of fs.readdirSync(out)) {
+  if (/^(tech-stack|btn-.*)\.svg$/.test(f) || /^(tech-stack|btn-.*)-(dark|light)\.svg$/.test(f)) fs.unlinkSync(path.join(out, f));
+}
+for (const mode of Object.keys(THEMES)) {
+  T = THEMES[mode];
+  fs.writeFileSync(path.join(out, `tech-stack-${mode}.svg`), techStack());
+  fs.writeFileSync(path.join(out, `btn-portfolio-${mode}.svg`), button("Portfolio", "vercel"));
+  fs.writeFileSync(path.join(out, `btn-linkedin-${mode}.svg`), button("LinkedIn", "linkedin", "l"));
+  fs.writeFileSync(path.join(out, `btn-email-${mode}.svg`), button("Email", "gmail"));
+}
+console.log("Built tech-stack + buttons (dark and light)");
