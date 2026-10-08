@@ -47,6 +47,7 @@ USER = os.environ.get("GH_USER", "KedarGhadyalji")
 TOKEN = os.environ.get("GH_TOKEN", "")
 MOCK = "--mock" in sys.argv
 README_PATH = os.environ.get("README_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "README.md"))
+EXPERIENCE_PATH = os.environ.get("EXPERIENCE_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "experience.json"))
 PROJECTS_PATH = os.environ.get("PROJECTS_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "projects.json"))
 
 
@@ -462,15 +463,73 @@ def update_readme_projects(projects):
         print("README has no PROJECTS markers; cards written but README not changed")
 
 
+def experience_card(items):
+    W, X0, XL = 990, 72, 46
+    out_nodes, out_text, chips_css = "", "", ""
+    y = 74
+    first_cy = last_cy = None
+    for k, e in enumerate(items):
+        top = y
+        cy = top + 17
+        first_cy = first_cy if first_cy is not None else cy
+        last_cy = cy
+        kind = e.get("type", "work")
+        if kind == "now":
+            out_nodes += f'<circle cx="{XL}" cy="{cy}" r="7" fill="{BG}" stroke="{ACCENT2}" stroke-width="2.5"/>'
+        else:
+            col = ACCENT if kind == "work" else ACCENT2
+            out_nodes += f'<circle cx="{XL}" cy="{cy}" r="7" fill="{col}" stroke="{BG}" stroke-width="3"/>'
+        g = f'<text x="{X0}" y="{y + 4}" class="sub" style="fill:{MUTED}">{escape(e.get("date", ""))}</text>'
+        y += 26
+        g += f'<text x="{X0}" y="{y}" class="val" style="font-size:16px">{escape(e["title"])}</text>'
+        y += 20
+        if e.get("org"):
+            g += f'<text x="{X0}" y="{y}" class="mid" style="fill:{ACCENT2}">{escape(e["org"])}</text>'
+            y += 22
+        else:
+            y += 4
+        for ln in textwrap.wrap(e.get("description", ""), 105):
+            g += f'<text x="{X0}" y="{y}" class="lbl" style="fill:{TEXT};font-weight:400">{escape(ln)}</text>'
+            y += 19
+        for b in e.get("bullets", []):
+            y += 3
+            for j, ln in enumerate(textwrap.wrap(b, 100)):
+                if j == 0:
+                    g += f'<polygon points="{X0 + 3},{y - 8} {X0 + 8},{y - 4} {X0 + 3},{y} {X0 - 2},{y - 4}" fill="{ACCENT}"/>'
+                g += f'<text x="{X0 + 18}" y="{y}" class="lbl" style="fill:{TEXT};font-weight:400">{escape(ln)}</text>'
+                y += 19
+        if e.get("stack"):
+            y += 8
+            cx = X0
+            for t in e["stack"]:
+                w = int(len(t) * 6.6 + 20)
+                g += (f'<rect x="{cx}" y="{y}" width="{w}" height="23" rx="11.5" fill="{CHIP}" stroke="{CHIPB}"/>'
+                      f'<text x="{cx + w / 2:.0f}" y="{y + 16}" class="sub" text-anchor="middle" style="fill:{TEXT}">{escape(t)}</text>')
+                cx += w + 8
+            y += 23
+        out_text += f'<g class="in" style="animation-delay:{k * 0.15:.2f}s">{g}</g>'
+        y += 30
+    H = y - 30 + 28
+    rail = ""
+    if first_cy is not None and last_cy > first_cy:
+        rail = f'<rect x="{XL - 1}" y="{first_cy}" width="2" height="{last_cy - first_cy}" rx="1" fill="{BORDER}"/>'
+    inner = f'<text x="28" y="36" class="title">Experience</text>{rail}{out_nodes}{out_text}'
+    write("experience.svg", card(W, H, inner, "Experience timeline"))
+
+
 def main():
     if not MOCK and not TOKEN:
         sys.exit("GH_TOKEN is not set (use --mock for a local preview).")
     data = fetch_mock() if MOCK else fetch_real()
     projects = load_projects()
+    try:
+        experience = json.load(open(EXPERIENCE_PATH, encoding="utf-8"))
+    except FileNotFoundError:
+        experience = []
     stats = {p["repo"]: ((None, None) if p.get("private") else repo_stats(p["repo"])) for p in projects}  # fetched once, drawn in both themes
 
     # clear cards from older layouts (unsuffixed files, retired pins, removed projects)
-    for pattern in ("pin-*.svg", "project-*.svg", "stats*.svg", "top-langs*.svg", "streak*.svg", "activity*.svg"):
+    for pattern in ("pin-*.svg", "project-*.svg", "stats*.svg", "top-langs*.svg", "streak*.svg", "activity*.svg", "experience*.svg"):
         for old in glob.glob(os.path.join(OUT_DIR, pattern)):
             os.remove(old)
 
@@ -482,6 +541,8 @@ def main():
         activity_card(data)
         for i, p in enumerate(projects):
             project_card(p, i, *stats[p["repo"]])
+        if experience:
+            experience_card(experience)
     if projects:
         update_readme_projects(projects)
 
