@@ -1,0 +1,32 @@
+[
+  {
+    "type": "now",
+    "date": "Now",
+    "title": "Open to internships and full-time roles",
+    "description": "Software engineering roles, open-source collaboration, and applied AI and full-stack projects."
+  },
+  {
+    "type": "milestone",
+    "date": "Aug 2026 - Present",
+    "title": "Creator and maintainer, ZeroBucket",
+    "org": "Open source",
+    "description": "An open-source library for database-native image storage, published on PyPI and npm.",
+    "bullets": [
+      "Keeps images in the Postgres, SQLite or MySQL database you already run, with a Django adapter",
+      "Released as a Python package and as a TypeScript package"
+    ],
+    "stack": ["Python", "TypeScript", "PostgreSQL"]
+  },
+  {
+    "type": "work",
+    "date": "Jan 2026 - Apr 2026",
+    "title": "Research and Innovation Intern, Software Development",
+    "org": "Cyber Secured India",
+    "description": "Engineered core system mechanics, interactive modules, and progress-tracking layouts for a centralized Learning Management System (LMS).",
+    "bullets": [
+      "Implemented secure dual-mode authentication, dynamic evaluation tools, discussion forums, and automated certificate generation",
+      "Optimized front-facing delivery channels, improving mobile responsiveness, layout performance, and UI stability"
+    ],
+    "stack": ["React", "TypeScript", "MongoDB"]
+  }
+]
