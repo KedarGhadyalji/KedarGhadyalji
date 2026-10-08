@@ -7,15 +7,38 @@
   },
   {
     "type": "milestone",
-    "date": "Aug 2026 - Present",
-    "title": "Creator and maintainer, ZeroBucket",
+    "date": "Oct 2, 2026",
+    "title": "Published ZeroBucket on npm",
     "org": "Open source",
-    "description": "An open-source library for database-native image storage, published on PyPI and npm.",
-    "bullets": [
-      "Keeps images in the Postgres, SQLite or MySQL database you already run, with a Django adapter",
-      "Released as a Python package and as a TypeScript package"
-    ],
-    "stack": ["Python", "TypeScript", "PostgreSQL"]
+    "description": "Released the TypeScript package of ZeroBucket, bringing database-native image storage to JavaScript and TypeScript projects.",
+    "stack": [
+      "TypeScript",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "type": "milestone",
+    "date": "Aug 24, 2026",
+    "title": "Published ZeroBucket on PyPI",
+    "org": "Open source",
+    "description": "Released ZeroBucket as a Python library that keeps images in the Postgres, SQLite or MySQL database you already run, with a Django adapter.",
+    "stack": [
+      "Python",
+      "Django",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "type": "milestone",
+    "date": "Jul 5, 2026",
+    "title": "Published Tailwind Warning Auto-Fix on the VS Code Marketplace",
+    "org": "VS Code extension",
+    "description": "Fixes every Tailwind CSS IntelliSense warning in a file with one command, and one undo reverts the whole batch.",
+    "stack": [
+      "TypeScript",
+      "VS Code API",
+      "Tailwind CSS"
+    ]
   },
   {
     "type": "work",
@@ -27,6 +50,10 @@
       "Implemented secure dual-mode authentication, dynamic evaluation tools, discussion forums, and automated certificate generation",
       "Optimized front-facing delivery channels, improving mobile responsiveness, layout performance, and UI stability"
     ],
-    "stack": ["React", "TypeScript", "MongoDB"]
+    "stack": [
+      "React",
+      "TypeScript",
+      "MongoDB"
+    ]
   }
 ]
