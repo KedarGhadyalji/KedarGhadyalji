@@ -41,34 +41,15 @@ From modeling well-structured database objects and managing REST API paths to se
 ## 🚀 Featured Projects
 
 <!--PROJECTS:START-->
-<div align="center">
-
-<a href="https://github.com/KedarGhadyalji/tailwind-warning-auto-fix"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-1-dark.svg"/><img src="profile/project-1-light.svg" width="49%" alt="Tailwind Warning Auto-Fix project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/ZeroBucket"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-2-dark.svg"/><img src="profile/project-2-light.svg" width="49%" alt="ZeroBucket project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/PixelJar"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-3-dark.svg"/><img src="profile/project-3-light.svg" width="49%" alt="PixelJar project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/Spawn_Git_Clone"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-4-dark.svg"/><img src="profile/project-4-light.svg" width="49%" alt="Spawn project card"/></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-5-dark.svg"/><img src="profile/project-5-light.svg" width="49%" alt="MindCare AI project card"/></picture>
-<a href="https://github.com/KedarGhadyalji/CraftedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-6-dark.svg"/><img src="profile/project-6-light.svg" width="49%" alt="CraftedCV project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/AnalyzedCV"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-7-dark.svg"/><img src="profile/project-7-light.svg" width="49%" alt="AnalyzedCV project card"/></picture></a>
-<a href="https://github.com/KedarGhadyalji/Genie-AI-Pocket-Agent"><picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-8-dark.svg"/><img src="profile/project-8-light.svg" width="49%" alt="Genie project card"/></picture></a>
-<picture><source media="(prefers-color-scheme: dark)" srcset="profile/project-9-dark.svg"/><img src="profile/project-9-light.svg" width="49%" alt="SSMS project card"/></picture>
-
-</div>
 <!--PROJECTS:END-->
 
 <br/>
 
 ## 💼 Experience
 
-### Research and Innovation Intern, Software Development · Cyber Secured India
-`Jan 2026 - Apr 2026`
-
-Engineered core system mechanics, interactive modules, and progress-tracking layouts for a centralized Learning Management System (LMS).
-
-- Implemented secure dual-mode authentication, dynamic evaluation tools, discussion forums, and automated certificate generation
-- Optimized front-facing delivery channels, improving mobile responsiveness, layout performance, and UI stability
-
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/React-26233A?style=flat-square&logo=react&logoColor=EBBCBA"/><img src="https://img.shields.io/badge/React-F2E9E1?style=flat-square&logo=react&logoColor=B4637A" alt="React"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/TypeScript-26233A?style=flat-square&logo=typescript&logoColor=EBBCBA"/><img src="https://img.shields.io/badge/TypeScript-F2E9E1?style=flat-square&logo=typescript&logoColor=B4637A" alt="TypeScript"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/MongoDB-26233A?style=flat-square&logo=mongodb&logoColor=EBBCBA"/><img src="https://img.shields.io/badge/MongoDB-F2E9E1?style=flat-square&logo=mongodb&logoColor=B4637A" alt="MongoDB"/></picture> <picture><source media="(prefers-color-scheme: dark)" srcset="https://img.shields.io/badge/UI%2FUX-26233A?style=flat-square&labelColor=26233A&color=26233A"/><img src="https://img.shields.io/badge/UI%2FUX-F2E9E1?style=flat-square&labelColor=F2E9E1&color=F2E9E1" alt="UI/UX"/></picture>
+<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="profile/experience-dark.svg"/><img src="profile/experience-light.svg" width="98%" alt="Experience timeline"/></picture>
+</div>
 
 <br/>
 
