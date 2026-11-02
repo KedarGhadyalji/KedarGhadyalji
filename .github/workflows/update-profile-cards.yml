@@ -43,6 +43,7 @@ jobs:
           GH_USER: ${{ github.repository_owner }}
           # Optional: add a PAT (scope: read:user) as TROPHY_TOKEN to include private contributions.
           GH_TOKEN: ${{ secrets.TROPHY_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_TOKEN_FALLBACK: ${{ secrets.GITHUB_TOKEN }}
         run: python scripts/generate_cards.py
 
       - name: Commit and push
