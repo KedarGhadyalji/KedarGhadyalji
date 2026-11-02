@@ -16,6 +16,7 @@ import random
 import re
 import sys
 import textwrap
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta, timezone
 from html import escape
@@ -45,6 +46,8 @@ FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif"
 OUT_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "profile")
 USER = os.environ.get("GH_USER", "KedarGhadyalji")
 TOKEN = os.environ.get("GH_TOKEN", "")
+# Optional backup token (the built-in GITHUB_TOKEN). Used if the main token is expired/revoked (HTTP 401).
+FALLBACK_TOKEN = os.environ.get("GH_TOKEN_FALLBACK", "")
 MOCK = "--mock" in sys.argv
 README_PATH = os.environ.get("README_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "README.md"))
 EXPERIENCE_PATH = os.environ.get("EXPERIENCE_PATH", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "experience.json"))
@@ -53,17 +56,34 @@ PROJECTS_PATH = os.environ.get("PROJECTS_PATH", os.path.join(os.path.dirname(os.
 
 # ---- Data -------------------------------------------------------------------
 def gql(query, variables=None):
-    req = urllib.request.Request(
-        "https://api.github.com/graphql",
-        data=json.dumps({"query": query, "variables": variables or {}}).encode(),
-        headers={"Authorization": f"bearer {TOKEN}", "Content-Type": "application/json",
-                 "User-Agent": "profile-cards"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as r:
-        body = json.load(r)
-    if "errors" in body:
-        raise RuntimeError(body["errors"])
-    return body["data"]
+    global TOKEN
+    payload = json.dumps({"query": query, "variables": variables or {}}).encode()
+    candidates = [TOKEN] + ([FALLBACK_TOKEN] if FALLBACK_TOKEN and FALLBACK_TOKEN != TOKEN else [])
+    last_err = None
+    for tok in candidates:
+        if not tok:
+            continue
+        req = urllib.request.Request(
+            "https://api.github.com/graphql",
+            data=payload,
+            headers={"Authorization": f"bearer {tok}", "Content-Type": "application/json",
+                     "User-Agent": "profile-cards"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                body = json.load(r)
+        except urllib.error.HTTPError as e:
+            if e.code == 401:
+                print("::warning::GitHub rejected a token (401). The TROPHY_TOKEN secret is probably expired "
+                      "or revoked; trying the fallback token.")
+                last_err = e
+                continue
+            raise
+        TOKEN = tok  # remember the token that worked
+        if "errors" in body:
+            raise RuntimeError(body["errors"])
+        return body["data"]
+    sys.exit("All tokens were rejected (401). Delete or regenerate the TROPHY_TOKEN secret.") if last_err else None
 
 
 PROFILE_Q = """
@@ -518,7 +538,7 @@ def experience_card(items):
 
 
 def main():
-    if not MOCK and not TOKEN:
+    if not MOCK and not (TOKEN or FALLBACK_TOKEN):
         sys.exit("GH_TOKEN is not set (use --mock for a local preview).")
     data = fetch_mock() if MOCK else fetch_real()
     projects = load_projects()
